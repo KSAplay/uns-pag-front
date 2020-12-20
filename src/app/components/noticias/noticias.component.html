@@ -1,0 +1,24 @@
+
+<div class="noticias">
+    <h2 class="titulo">NOTICIAS</h2>
+</div>
+
+<div class=" news">
+
+    <p-carousel [value]="noticias" [numVisible]="3" [numScroll]="3" >
+
+        <ng-template let-noticia pTemplate="item">
+         
+                <div class="card">
+                    <img class="card-img" src="{{noticia.srcImage}}" alt="{{noticia.title}}"><br>
+                    <div class="card-text">
+                        {{noticia.title}}
+                    </div>
+                    <div class="fecha">
+                        {{noticia.fecha}}
+                    </div>
+                </div>
+        </ng-template>
+    </p-carousel>
+
+</div>

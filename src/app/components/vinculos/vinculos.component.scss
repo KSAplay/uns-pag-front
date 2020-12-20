@@ -1,0 +1,62 @@
+
+@import '../../../shared/colores.scss';
+
+.titulo{
+    margin-top: 40px;
+    margin-left: 80px;
+    color: $rojoPrimario;
+}
+
+.vinculos{
+    background-color: $grisVinculos;
+    height: 110px;
+}
+
+.logos{
+    background-color: $grisVinculos;
+    height: 200px;
+    padding-right: 38px;
+    padding-left: 38px;
+}
+
+.card{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0px;
+    text-align: center;
+    height: 110px;
+}
+
+.logo-img{
+    text-align: center;
+    float: center;
+    width: auto;
+    height: 110px;
+}
+
+/* BOTON ACTIVO (Los cambios sobreescriben el de los Inactivos)*/
+::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator.p-highlight button.p-link {
+    background-color: $rojoPrimario;
+    border-color: $rojoPrimario;
+    border-radius: 5px;
+}
+/* BOTÓNES INACTIVOS (los cambios aqui aplican para el Boton Activo)*/
+::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator button.p-link {
+    margin-top: 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: $grisbotonCarrusel;
+    border-width: 2.2px;
+    height: 12px;
+    width: 25px;
+}
+
+/* FLECHAS DE LOS COSTADOS */
+::ng-deep div.logos button.p-link.p-ripple span.p-carousel-prev-icon{
+    font-weight: bolder;
+    color: $rojoPrimario;
+    border-radius: 0px;
+}

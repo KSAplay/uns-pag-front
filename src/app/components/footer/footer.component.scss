@@ -1,0 +1,142 @@
+
+@import '../../../shared/colores.scss';
+
+::ng-deep div.p-grid {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.p-grid{
+    color: white;
+}
+
+/* --------------- DIVISION 1 --------------- */
+.footer1{
+    background-color: $footer1;
+    height: 310px;
+}
+
+.p-col-4{
+    padding: 35px 35px 35px 35px;
+}
+
+/* ------  UBICACIÓN ------- */
+.ubicacion{
+    font-size: 21px;
+}
+
+.texto-ubicacion{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.location{
+    float: left;
+    width: 12px;
+    height: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* ------  CONTACTO ------- */
+.contacto{
+    font-size: 21px;
+}
+
+.texto-contacto{
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.btn-contacto{
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    padding-top: 15px;
+    margin-top: 25px;
+    /*margin-left: 10px;*/
+    background-color: $rojoPrimario;
+    width: 175px;
+    height: 114px;
+}
+
+.contact{
+    margin-top: 17px;
+    width: 35px;
+    height: 38px;
+}
+
+.btn-libro{
+    float: right;
+    text-align: center;
+    font-size: 15px;
+    color: $rojoPrimario;
+    padding-top: 12px;
+    margin-top: 25px;
+    /*margin-right: 10px;*/
+    background-color: white;
+    width: 175px;
+    height: 114px;
+}
+
+.libro{
+    margin-top: 12px;
+    width: 42px;
+    height: 33px;
+}
+
+/* ------  SOBRE ESTE SITIO ------- */
+.sobre{
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.texto-sobre{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.bloque{
+    border-bottom: 1px solid white;
+}
+
+.flechita{
+    float: right;
+}
+
+/* ---------------------- DIVISION 2 ---------------------- */
+.footer2{
+    background-color: $footer2;
+    height: 70px;
+}
+
+.derechos{
+    font-size: 15px;
+    margin-left: 35px;
+    margin-top: 18px;
+}
+
+.texto-siguenos{
+    float: left;
+    font-size: 15px;
+    margin-left: 280px;
+    text-align: right;
+    padding-top: 19px;
+}
+
+.redes{
+    float: right;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+.imagen{
+    display: inline;
+    width: 43px;
+    height: 43px;
+    margin-right: 10px;
+    margin-left: 8px;
+}
+

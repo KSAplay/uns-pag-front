@@ -1,0 +1,17 @@
+
+<div class= "comunicados">
+    <h2 class="titulo" ><br>COMUNICADOS<br></h2>
+</div>
+
+<div class="events">
+    <p-carousel [value]="comunicados" [numVisible]="3" [numScroll]="3" >
+        <ng-template let-comunicado pTemplate="item">
+                <div class="card">
+                    <img class="com-img" src="{{comunicado.srcImage}}" alt="Comunicado1">
+                    <div class="text-block">
+                        {{comunicado.fecha}}
+                    </div>
+                </div>
+        </ng-template>
+    </p-carousel>
+</div>

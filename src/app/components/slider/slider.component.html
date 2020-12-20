@@ -1,0 +1,27 @@
+
+<div class=" container"  style="margin-top: -50px;">
+    <p-galleria  style="width: 100%;" [value]="images" [responsiveOptions]="responsiveOptions" [numVisible]="5" [showThumbnails]="false"
+        [showIndicators]="true" [showIndicatorsOnItem]="true" >
+    
+        <ng-template pTemplate="item" let-item>
+            
+            <img [src]="item.srcImage" style="width: 100%; filter: brightness(70%); " >
+    
+            <div class="centered">
+                <h1 class="titulo-centro">Universidad Nacional del Santa</h1>
+                    <div class="subtitulo-centro">
+                    <p style="margin-top: 0;">Formando líderes para el desarrollo de la Región y el País</p>
+                  </div>
+            </div>
+        </ng-template>
+       
+        <ng-template pTemplate="thumbnail" let-item>
+            <div class=" p-nogutter p-justify-center">
+                <img [src]="item.srcImage" style="display: block;" />
+            </div>
+        </ng-template>
+        <div style="display: block;">
+            <app-menu-bar></app-menu-bar>
+        </div>
+    </p-galleria>
+</div>

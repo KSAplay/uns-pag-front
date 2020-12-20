@@ -1,0 +1,83 @@
+
+@import '../../../shared/colores.scss';
+
+.titulo{
+    margin-top: 40px;
+    margin-left: 80px;
+    color: $rojoPrimario;
+}
+
+.logros{
+    background-color: white;
+    height: 110px;
+}
+
+.logros2{
+    padding-left: 50px;
+    padding-right: 50px;
+    color: $rojoPrimario;
+    text-align: center;
+    font-size: 15px;
+    background-color: white;
+    height: 250px;
+}
+
+.carreras-img{
+    float: center;
+    margin-bottom: 8px;
+    width: auto;
+    height: 102px;
+    -webkit-filter: drop-shadow(3px 3px 1px #0000003a);
+    filter: drop-shadow(3px 3px 1px #0000003a);
+}
+
+.alumnos-img{
+    float: center;
+    margin-bottom: 8px;
+    width: auto;
+    height: 102px;
+    -webkit-filter: drop-shadow(3px 3px 1px #0000003a);
+    filter: drop-shadow(3px 3px 1px #0000003a);
+}
+.convenios{
+    padding-right: 25px;
+}
+
+.convenios-img{
+    float: center;
+    margin-top: 19px;
+    margin-bottom: 11px;
+    width: auto;
+    height: 80px;
+    -webkit-filter: drop-shadow(3px 3px 1px #0000003a);
+    filter: drop-shadow(3px 3px 1px #0000003a);
+}
+
+.investigaciones-img{
+    float: center;
+    margin-top: 19px;
+    margin-bottom: 11px;
+    width: auto;
+    height: 80px;
+    -webkit-filter: drop-shadow(3px 3px 1px #0000003a);
+    filter: drop-shadow(3px 3px 1px #0000003a);
+}
+
+.fondos-img{
+    float: center;
+    margin-top: 8px;
+    margin-bottom: 11px;
+    width: auto;
+    height: 90px;
+    -webkit-filter: drop-shadow(3px 3px 1px #0000003a);
+    filter: drop-shadow(3px 3px 1px #0000003a);
+}
+
+.proyectos-img{
+    float: center;
+    margin-bottom: 8px;
+    width: auto;
+    height: 102px;
+    -webkit-filter: drop-shadow(3px 3px 1px #0000003a);
+    filter: drop-shadow(3px 3px 1px #0000003a);
+}
