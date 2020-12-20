@@ -3,12 +3,16 @@
     <h2 class="titulo">VÍNCULOS DE INTERÉS</h2>
 </div>
 
-<div class="logos">
-    <p-carousel [value]="logos" styleClass="carrucel" [numVisible]="5" [numScroll]="1" [circular]="true" [autoplayInterval]="3000">
+<div class="p-grid logos">
+    <div class="p-col-12">
+        <p-carousel [value]="logos" styleClass="carrucel" [numVisible]="5" [numScroll]="1" [circular]="true" [autoplayInterval]="3000">
             <ng-template let-log pTemplate="item">
+
                     <div class="card">
                         <img class="logo-img" [src]="log.srcImage" [alt]="log.alt">
                     </div>
+
             </ng-template>
     </p-carousel>
+    </div>
 </div>
