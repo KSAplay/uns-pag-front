@@ -80,9 +80,9 @@
     filter: drop-shadow(3px 3px 1px #0000003a);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 560px) {
     /* Para celulares */
-    .logros{ padding: 6% 0px 5% 13%; font-size: 20px; }
+    .logros{ padding: 9% 0px 5% 13%; font-size: 20px; }
     .logros2{ font-size: 13px; padding-bottom: 8%; }
     .carreras-img{ height: 72px; }
     .alumnos-img{ height: 72px; }
@@ -96,7 +96,7 @@
 
 @media only screen and (max-width: 1000px) {
     /* Para tablets: */
-    .logros{ padding: 6% 0% 2% 10%; }
+    .logros{ padding: 4% 0% 2% 10%; }
     .carreras-img{margin-top: 10px; padding-bottom: 8%; }
     .alumnos-img{margin-top: 10px; }
     .convenios{ padding-right: 0px; }
@@ -104,4 +104,18 @@
     .investigaciones-img{margin-top: 10px; }
     .fondos-img{margin-top: 10px; }
     .proyectos-img{margin-top: 10px; }
+}
+
+@media only screen and (max-width: 560px) {
+    /* Para celulares */
+    .logros{ padding: 6% 0px 5% 13%; font-size: 20px; }
+    .logros2{ font-size: 13px; padding-bottom: 8%; }
+    .carreras-img{ height: 72px; }
+    .alumnos-img{ height: 72px; }
+    .convenios{ padding-right: 0px; }
+    .convenios-img{ height: 50px; }
+    .investigaciones-img{ height: 50px; }
+    .fondos-img{ height: 60px; }
+    .proyectos-img{ height: 62px; }
+
 }

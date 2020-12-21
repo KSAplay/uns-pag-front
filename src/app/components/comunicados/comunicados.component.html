@@ -5,7 +5,7 @@
 
 <div class="p-grid events">
     <div class="p-col-12">
-        <p-carousel [value]="comunicados" [numVisible]="3" [numScroll]="3" [responsiveOptions]="responsiveOptions">
+        <p-carousel [value]="comunicados" [numVisible]="3" [numScroll]="3" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
             <ng-template let-comunicado pTemplate="item">
 
                     <div class="card">

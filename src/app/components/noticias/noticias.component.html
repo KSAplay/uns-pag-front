@@ -5,7 +5,7 @@
 
 <div class="p-grid news">
     <div class="p-col-12">
-        <p-carousel [value]="noticias" [numVisible]="4" [numScroll]="4" [responsiveOptions]="responsiveOptions">
+        <p-carousel [value]="noticias" [numVisible]="4" [numScroll]="4" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
             <ng-template let-noticia pTemplate="item">
                 <div class="card">
                     <img class="card-img" src="{{ noticia.srcImage }}" alt="{{ noticia.title }}" /><br />

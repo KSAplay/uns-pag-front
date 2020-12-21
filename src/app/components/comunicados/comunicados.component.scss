@@ -70,17 +70,16 @@
     color: white;
     border-radius: 0px;
 }
-
-@media only screen and (max-width: 560px) {
-    ::ng-deep .events ul { display: none; }
-    .comunicados{ padding: 9% 0% 5% 13%; font-size: 20px; }
-    .events{ padding-left: 0%; padding-right: 0%; padding-bottom: 8%; }
+@media only screen and (max-width: 1000px) {
+    .comunicados{ padding: 4% 0% 4% 10%; }
     .card{ margin: 0% 2%;}
     .com-img{ height: 350px; }
 }
 
-@media only screen and (max-width: 1000px) {
-    .comunicados{ padding: 4% 0% 4% 10%; }
+@media only screen and (max-width: 560px) {
+    ::ng-deep .events ul { display: none; }
+    .comunicados{ padding: 6% 0% 5% 13%; font-size: 20px; }
+    .events{ padding-left: 0%; padding-right: 0%; padding-bottom: 8%; }
     .card{ margin: 0% 2%;}
     .com-img{ height: 350px; }
 }

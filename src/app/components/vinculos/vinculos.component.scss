@@ -17,24 +17,23 @@
 
 .logos{
     background-color: $grisVinculos;
-    height: 200px;
+    height: auto;
     padding-right: 38px;
     padding-left: 38px;
 }
 
 .card{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 14%;
+    margin-right: 14%;
     background-color: white;
     border-radius: 15px;
-    padding: 0px;
     text-align: center;
-    height: 110px;
+    height: auto;
+    width: auto;
 }
 
 .logo-img{
     text-align: center;
-    float: center;
     width: auto;
     height: 110px;
 }
@@ -63,10 +62,16 @@
     color: $rojoPrimario;
     border-radius: 0px;
 }
+@media only screen and (max-width: 1000px) {
+    .vinculos{ padding: 4% 0% 4% 10%; }
+    .card{ margin-left: 5%; margin-right: 5%; }
+    .logo-img{ height: 100px; }
+}
 
-@media(max-width: 560px){
-    ::ng-deep .logos ul  {
-        display: none;
-    }
-    
+@media only screen and (max-width: 560px) {
+    ::ng-deep .logos ul  { display: none; }
+    .vinculos{ padding: 6% 0% 5% 13%; font-size: 20px; }
+    .card{ margin-left: 5%; margin-right: 5%; }
+    .logos{ padding-bottom: 6%; padding-right: 0%; padding-left: 0%; }
+    .logo-img {height: 90px;}
 }
