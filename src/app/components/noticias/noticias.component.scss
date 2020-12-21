@@ -5,40 +5,58 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+
+
+
 .titulo{
-    margin-top: 30px;
-    margin-left: 80px;
+
+    margin: 0%;
+    margin-top: 2%;
+    margin-left: 5%;
     color: $rojoPrimario;
+
+    //margin-top: 30%;
+    //margin-left: 80%;
+    //padding: 2px;
+    //margin-bottom: 1%;
 }
+    
+    
+
 
 .noticias{
 
     background-color: white;
-    height: 40px;    
+    //height: 30%;    
 }
 
 .news{
-   
-    padding-left: 90px;
-    padding-right: 90px;
-    background-color: white;
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 2px;
+    
+    padding-left: 3%;
+    padding-right: 3%;
+    //padding-right: 90%;
+    //background-color: white;
+    //height: auto;
+   // margin-top: 10%;
+    //margin-bottom: 2%;
 }
 
 .card{
     float: center;
     text-align: center;
     background-color: white;
-    border-radius: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 15px;
-    width: auto;
-    height: 330px;
+    border-radius: 10%;
+    //width: 320px;
+    margin: 4%;
+    padding: 3%;
+    min-height: 90%;
+   /* margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 20%;
+   
+    
+    
+    height: 330%;*/
     -webkit-filter: drop-shadow(3px 3px 5px #0000003a);
     filter: drop-shadow(3px 3px 5px #0000003a);
 }
@@ -48,24 +66,30 @@
     font-size: 14px;
     padding-left: 20px;
     padding-right: 20px;
-    height: 65px;
+    //height: 65px;
 }
 
 .fecha{
-    margin-top: 10px;
+    //margin-top: 10px;
+    position: absolute;
     color: $rojoPrimario;
     font-size: 15px;
     font-weight: bold;
+    bottom:1%;
     float: bottom;
+    width: 90%;
+
 }
 
 .card-img{
     float: center;
     text-align: center;
-    border-radius: 18px;
-    width: 290px;
-    height: 190px;
-    margin-bottom: 8px;
+    border-radius: 10%;
+    width: 90%;
+    margin-top: 5%;
+   
+    //height: 190px;
+    //margin-bottom: 8%;
 }
 
 
@@ -79,6 +103,7 @@
     border-width: 2.2px;
     height: 12px;
     width: 25px;
+
 }
 
 
