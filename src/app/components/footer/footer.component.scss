@@ -5,17 +5,15 @@
     font-family: 'PT Sans', sans-serif;
 }
 
-.p-grid{
-    color: white;
-}
 
 /* --------------- DIVISION 1 --------------- */
 .footer1{
     background-color: $footer1;
-    height: 310px;
+    height: auto;
+    color: white;
 }
 
-.p-col-4{
+.grupo{
     padding: 35px 35px 35px 35px;
 }
 
@@ -34,7 +32,6 @@
     float: left;
     width: 12px;
     height: 17px;
-    margin-left: 10px;
     margin-right: 10px;
 }
 
@@ -61,6 +58,11 @@
     height: 114px;
 }
 
+.btn-contacto:hover{
+    cursor: pointer;
+    background-color: $footer2;
+}
+
 .contact{
     margin-top: 17px;
     width: 35px;
@@ -80,6 +82,11 @@
     height: 114px;
 }
 
+.btn-libro:hover{
+    cursor: pointer;
+    background-color: $footer2;
+}
+
 .libro{
     margin-top: 12px;
     width: 42px;
@@ -93,9 +100,13 @@
 }
 
 .texto-sobre{
-    margin-top: 12px;
-    margin-bottom: 12px;
+    padding: 3% 0% 3% 4%;
     font-size: 15px;
+}
+
+.texto-sobre:hover{
+    cursor: pointer;
+    background-color: $footer2;
 }
 
 .bloque{
@@ -106,10 +117,15 @@
     float: right;
 }
 
+.flechita:hover{
+    cursor: pointer;
+}
+
 /* ---------------------- DIVISION 2 ---------------------- */
 .footer2{
     background-color: $footer2;
     height: 70px;
+    color: white;
 }
 
 .derechos{
@@ -121,18 +137,51 @@
 .texto-siguenos{
     float: left;
     text-align: right;
+    padding: 3% 5% 0% 0%;
     font-size: 15px;
+    width: 60%;
+    height: 100%;
 }
 
 .redes{
     float: right;
     display: inline;
+    padding-top: 1%;
+    width: 40%;
+    height: 100%;
 }
 
 .imagen{
-    width: 43px;
+    width: auto;
     height: 43px;
     margin-right: 10px;
     margin-left: 8px;
 }
 
+.imagen:hover {
+    cursor: pointer;
+    border-color: $rojoPrimario ;
+    border-radius: 100%;
+    border-width: 5%;
+    border-style: solid;
+}
+
+@media only screen and (max-width: 1000px) {
+    .btn-contacto{
+        text-align: left;
+        font-size: 14px;
+        margin-top: 25px;
+        /*margin-left: 10px;*/
+        background-color: $rojoPrimario;
+        width: 100%;
+        height: auto;  }
+    .contact{
+        float: right;
+        margin-top: 0%;
+        width: 35px;
+        height: 38px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+}
