@@ -1,6 +1,37 @@
+<div class="p-grid">
+    <div class= "p-col-12 comunicados">
+        <h2 class="titulo" ><br>COMUNICADOS<br></h2>
+    </div>
+    <div class="p-col-12 events">
+        <p-carousel [value]="comunicados" [numVisible]="3" [numScroll]="3" [responsiveOptions]="responsiveOptions">
+            <ng-template let-comunicado pTemplate="item">
 
+                    <div class="card">
+                     
+                            <img class="com-img" src="{{comunicado.srcImage}}" alt="Comunicado1">
+                            <div class="text-block">
+                                {{comunicado.fecha}}
+                            </div>
+                          
+                      
+                    </div>
+                    
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>
+
+
+
+
+<<<<<<< HEAD
 <div class="p-grid comunicados">
     <b>COMUNICADOS</b>
+=======
+<!--
+<div class= "p-grid comunicados">
+    <h2 class="titulo" ><br>COMUNICADOS<br></h2>
+>>>>>>> a9439756f9a99ca6cccd8eec1cfa51330e08337d
 </div>
 
 <div class="p-grid events">
@@ -19,3 +50,4 @@
         </p-carousel>
     </div>
 </div>
+-->
