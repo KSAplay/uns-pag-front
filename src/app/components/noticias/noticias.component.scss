@@ -5,40 +5,19 @@
     font-family: 'PT Sans', sans-serif;
 }
 
-
-
-
-.titulo{
-
-    margin: 0%;
-    margin-top: 2%;
-    margin-left: 5%;
-    color: $rojoPrimario;
-
-    //margin-top: 30%;
-    //margin-left: 80%;
-    //padding: 2px;
-    //margin-bottom: 1%;
-}
-    
-    
-
-
 .noticias{
-
     background-color: white;
-    //height: 30%;    
+    height: auto;
+    font-size: 23px;
+    padding: 3% 0% 2% 6%;
+    color: $rojoPrimario; 
 }
 
 .news{
-    
     padding-left: 3%;
     padding-right: 3%;
-    //padding-right: 90%;
-    //background-color: white;
-    //height: auto;
-   // margin-top: 10%;
-    //margin-bottom: 2%;
+    padding-bottom: 4%;
+    height: auto;
 }
 
 .card{
@@ -46,26 +25,24 @@
     text-align: center;
     background-color: white;
     border-radius: 10%;
-    //width: 320px;
+    width: auto;
     margin: 4%;
     padding: 3%;
    /* margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 20%;
-   
-    
-    
     height: 330%;*/
     -webkit-filter: drop-shadow(3px 3px 5px #0000003a);
     filter: drop-shadow(3px 3px 5px #0000003a);
 }
 
 .card-text{
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
     font-size: 14px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 10px;
     height: 100px;
     overflow: hidden;
     //height: 65px;
@@ -78,9 +55,9 @@
     font-size: 15px;
     font-weight: bold;
     padding-top: 2px;
-    bottom:3%;
+    bottom: 3%;
     //float: bottom;
-    width: 90%;
+    width: auto;
     white-space: nowrap;
 }
 
@@ -88,9 +65,9 @@
     float: center;
     text-align: center;
     border-radius: 10%;
-    width: 90%;
+    width: 95%;
     height: 180px;
-    margin-top: 5%;
+    margin-top: 2%;
     object-fit: cover;
     //height: 190px;
     //margin-bottom: 8%;
@@ -109,13 +86,6 @@
     width: 25px;
 
 }
-@media(max-width: 560px){
-    ::ng-deep .news ul  {
-        display: none;
-    }
-    
-}
-
 
 ::ng-deep .news .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
     
@@ -129,4 +99,15 @@
     font-weight: bolder;
     color: $rojoPrimario;
     border-radius: 0px;
+}
+
+@media only screen and (max-width: 560px) {
+    ::ng-deep .news ul { display: none; }
+    .noticias{ padding: 8% 0% 5% 13%; font-size: 20px; }
+    .fecha { padding-top: 10px;}
+    .news{ padding-left: 0%; padding-right: 0%; }
+}
+
+@media only screen and (max-width: 1000px) {
+    .noticias{ padding: 6% 0% 2% 10%; }
 }

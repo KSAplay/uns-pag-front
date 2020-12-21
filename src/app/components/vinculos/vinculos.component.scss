@@ -9,7 +9,10 @@
 
 .vinculos{
     background-color: $grisVinculos;
-    height: 110px;
+    height: auto;
+    font-size: 23px;
+    padding: 2.5% 0px 2.5% 6%;
+    color: $rojoPrimario;
 }
 
 .logos{
