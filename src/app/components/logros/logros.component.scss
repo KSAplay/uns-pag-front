@@ -1,15 +1,12 @@
 
 @import '../../../shared/colores.scss';
 
-.titulo{
-    margin-top: 40px;
-    margin-left: 80px;
-    color: $rojoPrimario;
-}
-
 .logros{
     background-color: white;
-    height: 110px;
+    height: auto;
+    font-size: 23px;
+    padding: 2.5% 0px 2.5% 6%;
+    color: $rojoPrimario;
 }
 
 .logros2{
@@ -20,7 +17,7 @@
     background-color: white;
     height: auto;
     padding: 0% 5%;
-    margin-bottom: 5%;
+    padding-bottom: 5%;
 }
 
 .carreras-img{
@@ -85,7 +82,8 @@
 
 @media only screen and (max-width: 600px) {
     /* Para celulares */
-    .logros2{ font-size: 13px; margin-bottom: 8%; }
+    .logros{ padding: 6% 0px 5% 13%; font-size: 20px; }
+    .logros2{ font-size: 13px; padding-bottom: 8%; }
     .carreras-img{ height: 72px; }
     .alumnos-img{ height: 72px; }
     .convenios{ padding-right: 0px; }
@@ -98,7 +96,7 @@
 
 @media only screen and (max-width: 1000px) {
     /* Para tablets: */
-    .carreras-img{margin-top: 10px; margin-bottom: 8%; }
+    .carreras-img{margin-top: 10px; padding-bottom: 8%; }
     .alumnos-img{margin-top: 10px; }
     .convenios{ padding-right: 0px; }
     .convenios-img{margin-top: 10px; }

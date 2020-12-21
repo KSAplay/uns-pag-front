@@ -14,20 +14,16 @@
 
 .comunicados{
     background-color: $rojoPrimario;
-    height: 80px;
-    margin-top: 1px;
+    height: auto;
+    font-size: 23px;
+    padding: 2.5% 0px 2.5% 6%;
+    color: white;
 }
 
 .events{
     background-color: $rojoPrimario;
     padding-left: 90px;
     padding-right: 90px;
-}
-
-.titulo{
-    margin-top: 0px;
-    margin-left: 80px;
-    color: white;
 }
 
 .card{

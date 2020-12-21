@@ -1,35 +1,25 @@
-
-<div class="p-grid">
-    <div class="p-col-12 noticias" >
-        <h2 class="titulo">NOTICIAS</h2>
-    </div>
-
-    <!-- <div class="p-grid news" style="background-color: yellow;"-->
-        <div class="p-col-12 news" >
-            <p-carousel [value]="noticias" [numVisible]="4" [numScroll]="4" [responsiveOptions]="responsiveOptions">
-                <ng-template let-noticia pTemplate="item">
-    
-                        <div class="card" >
-                          
-                                <img class="card-img" src="{{noticia.srcImage}}" alt="{{noticia.title}}"><br>
-                            
-                           <div class="card-text">
-                                <p class="truncate-overflow" >{{noticia.title}}</p>
-                            </div>
-                            <div class="fecha" >
-                                {{noticia.fecha}}
-                            </div>
-                        </div>
-    
-                </ng-template>
-            </p-carousel>
-        </div>
-    <!--/div-->
-
+<div class="p-grid noticias">
+    <b>NOTICIAS</b>
 </div>
 
+<div class="p-grid news">
+    <div class="p-col-12">
+        <p-carousel [value]="noticias" [numVisible]="4" [numScroll]="4" [responsiveOptions]="responsiveOptions">
+            <ng-template let-noticia pTemplate="item">
+                <div class="card">
+                    <img class="card-img" src="{{ noticia.srcImage }}" alt="{{ noticia.title }}" /><br />
 
-
+                    <div class="card-text">
+                        <p class="truncate-overflow">{{ noticia.title }}</p>
+                    </div>
+                    <div class="fecha">
+                        {{ noticia.fecha }}
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>
 
 <!--
 

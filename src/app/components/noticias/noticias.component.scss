@@ -5,40 +5,18 @@
     font-family: 'PT Sans', sans-serif;
 }
 
-
-
-
-.titulo{
-
-    margin: 0%;
-    margin-top: 2%;
-    margin-left: 5%;
-    color: $rojoPrimario;
-
-    //margin-top: 30%;
-    //margin-left: 80%;
-    //padding: 2px;
-    //margin-bottom: 1%;
-}
-    
-    
-
-
 .noticias{
-
     background-color: white;
-    //height: 30%;    
+    height: auto;
+    font-size: 23px;
+    padding: 2.5% 0px 2.5% 6%;
+    color: $rojoPrimario; 
 }
 
 .news{
-    
     padding-left: 3%;
     padding-right: 3%;
-    //padding-right: 90%;
-    //background-color: white;
-    //height: auto;
-   // margin-top: 10%;
-    //margin-bottom: 2%;
+    height: auto;
 }
 
 .card{
@@ -46,7 +24,7 @@
     text-align: center;
     background-color: white;
     border-radius: 10%;
-    //width: 320px;
+    width: auto;
     margin: 4%;
     padding: 3%;
    /* margin-left: 15%;
@@ -80,7 +58,7 @@
     padding-top: 2px;
     bottom:3%;
     //float: bottom;
-    width: 90%;
+    width: auto;
     white-space: nowrap;
 }
 
