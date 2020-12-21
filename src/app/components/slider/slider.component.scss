@@ -21,7 +21,6 @@
   .titulo-centro{
     margin-bottom: 0;
     font-size: 7ch;
-    
   }
 
   .subtitulo-centro{
@@ -29,6 +28,27 @@
     margin-left: 30%;
     margin-right: 30%;
     font-size: 3ch;
+  }
+
+
+  @media only screen and (max-width: 1055px) {
+    .titulo-centro{ font-size: 6ch; }
+   // .subtitulo-centro{ font-size: 2ch; }
+  }
+
+  @media only screen and (max-width: 880px) {
+    .titulo-centro{ font-size: 4ch; }
+    .subtitulo-centro{ font-size: 2ch; }
+  }
+
+  @media only screen and (max-width: 650px) {
+    .titulo-centro{ font-size: 3ch; }
+    .subtitulo-centro{ font-size: 2ch; }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .titulo-centro{ font-size: 2ch; }
+    .subtitulo-centro{ font-size: 1ch; }
   }
 
 
