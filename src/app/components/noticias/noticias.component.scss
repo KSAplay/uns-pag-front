@@ -49,7 +49,6 @@
     //width: 320px;
     margin: 4%;
     padding: 3%;
-    min-height: 90%;
    /* margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 20%;
@@ -66,19 +65,23 @@
     font-size: 14px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 10px;
+    height: 100px;
+    overflow: hidden;
     //height: 65px;
 }
 
+
 .fecha{
     //margin-top: 10px;
-    position: absolute;
     color: $rojoPrimario;
     font-size: 15px;
     font-weight: bold;
-    bottom:1%;
-    float: bottom;
+    padding-top: 2px;
+    bottom:3%;
+    //float: bottom;
     width: 90%;
-
+    white-space: nowrap;
 }
 
 .card-img{
@@ -86,8 +89,9 @@
     text-align: center;
     border-radius: 10%;
     width: 90%;
+    height: 180px;
     margin-top: 5%;
-   
+    object-fit: cover;
     //height: 190px;
     //margin-bottom: 8%;
 }
@@ -104,6 +108,12 @@
     height: 12px;
     width: 25px;
 
+}
+@media(max-width: 560px){
+    ::ng-deep .news ul  {
+        display: none;
+    }
+    
 }
 
 
