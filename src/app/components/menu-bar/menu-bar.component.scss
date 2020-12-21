@@ -1,6 +1,41 @@
 
 @import "../../../shared/colores.scss";
 
+.menu-logo{
+
+}
+
+.menu-icon{
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  display: none;
+}
+
+@media screen and (max-width: 1055px) { //APARECER Y DESAPARECER ICONO
+  .menu-logo {display: none;}
+}
+
+@media screen and (max-width: 880px) { //APARECER Y DESAPARECER ICONO
+  .menu-icon {display: none;}
+  .menu-icon {
+    float: right;
+    display: block;
+    
+  }
+
+  .menu-contenido { float: right;
+    display: block;}
+  .menu-contenido {
+    display: none;
+  }
+}
+
 .linea{
   margin: 0px 16px;
   background-color: white;
@@ -167,3 +202,5 @@ body .dribbble img {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
