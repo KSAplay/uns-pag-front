@@ -13,13 +13,13 @@
 }
 
 .logros2{
-    padding-left: 50px;
-    padding-right: 50px;
+    float: center;
     color: $rojoPrimario;
     text-align: center;
     font-size: 15px;
     background-color: white;
     height: auto;
+    padding: 0% 5%;
     margin-bottom: 5%;
 }
 
@@ -81,4 +81,28 @@
     height: 102px;
     -webkit-filter: drop-shadow(3px 3px 1px #0000003a);
     filter: drop-shadow(3px 3px 1px #0000003a);
+}
+
+@media only screen and (max-width: 600px) {
+    /* Para celulares */
+    .logros2{ font-size: 13px; margin-bottom: 8%; }
+    .carreras-img{ height: 72px; }
+    .alumnos-img{ height: 72px; }
+    .convenios{ padding-right: 0px; }
+    .convenios-img{ height: 50px; }
+    .investigaciones-img{ height: 50px; }
+    .fondos-img{ height: 60px; }
+    .proyectos-img{ height: 62px; }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    /* Para tablets: */
+    .carreras-img{margin-top: 10px; margin-bottom: 8%; }
+    .alumnos-img{margin-top: 10px; }
+    .convenios{ padding-right: 0px; }
+    .convenios-img{margin-top: 10px; }
+    .investigaciones-img{margin-top: 10px; }
+    .fondos-img{margin-top: 10px; }
+    .proyectos-img{margin-top: 10px; }
 }
