@@ -70,10 +70,24 @@
     color: white;
     border-radius: 0px;
 }
-@media only screen and (max-width: 1000px) {
+
+@media only screen and (max-width: 1080px) {
     .comunicados{ padding: 4% 0% 4% 10%; }
     .card{ margin: 0% 2%;}
     .com-img{ height: 350px; }
+}
+
+@media only screen and (max-width: 850px) {
+    .com-img{ height: 250px; }
+}
+
+
+@media only screen and (max-width: 770px) {
+    .com-img{ height: 350px; }
+}
+
+@media only screen and (max-width: 700px) {
+    .com-img{ height: 250px; }
 }
 
 @media only screen and (max-width: 560px) {
@@ -81,5 +95,9 @@
     .comunicados{ padding: 6% 0% 5% 13%; font-size: 20px; }
     .events{ padding-left: 0%; padding-right: 0%; padding-bottom: 8%; }
     .card{ margin: 0% 2%;}
+    .com-img{ height: 430px; }
+}
+
+@media only screen and (max-width: 450px) {
     .com-img{ height: 350px; }
 }
