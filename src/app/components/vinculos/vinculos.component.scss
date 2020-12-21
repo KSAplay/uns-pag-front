@@ -60,3 +60,10 @@
     color: $rojoPrimario;
     border-radius: 0px;
 }
+
+@media(max-width: 560px){
+    ::ng-deep .logos ul  {
+        display: none;
+    }
+    
+}
