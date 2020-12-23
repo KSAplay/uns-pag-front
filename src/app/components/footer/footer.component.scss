@@ -160,11 +160,35 @@
 
 .imagen:hover {
     cursor: pointer;
-    border-color: $rojoPrimario ;
+    border-color: $footer2 ;
     border-radius: 100%;
     border-width: 5%;
     border-style: solid;
 }
+
+@media only screen and (min-width: 1800px) {
+    .grupo{ padding: 45px 40px 50px 40px; }
+    .texto-sobre{ padding: 3% 0% 3% 5%; font-size: 25px; }
+    // UBICACION
+    .ubicacion{ font-size: 35px; }
+    .texto-ubicacion{ margin-bottom: 20px; font-size: 25px; }
+    // CONTACTO
+    .contacto{ font-size: 35px; }
+    .texto-contacto{ font-size: 25px; }
+    .btn-contacto{ font-size: 25px; padding: 4%; margin-top: 7%; width: 45%; height: auto}
+    .btn-libro{ font-size: 25px; padding: 4%; margin-top: 7%; width: 45%; height: auto }
+    .libro{ margin-top: 17px; width: 52px; height: 43px; }
+    .contact{ margin-top: 17px; width: 45px; height: 48px; }
+    // SOBRE ESTE SITIO
+    .sobre{ font-size: 35px; }
+    // COPYRIGHT Y REDES SOCIALES
+    .derechos{ padding-top: 2%; padding-left: 4%; font-size: 25px; }
+    .texto-siguenos{ padding: 2% 5% 0% 0%; font-size: 28px; width: 60%; height: 100%; }
+    .redes{ width: 40%; padding-top: 1%; }
+    .imagen{ height: 70px; margin-right: 15px; margin-left: 14px; }
+    .flechita{ width: 3%; height: auto;}
+}
+
 @media only screen and (max-width: 1280px) {
     .btn-contacto{ float: center; font-size: 13px; padding: 4%; margin-top: 7%; width: 100%; height: auto}
     .contact{ display: none; }
@@ -193,8 +217,7 @@
     .derechos{ padding-top: 2%; padding-left: 4%; font-size: 13px; }
     .texto-siguenos{ padding: 4% 5% 0% 0%; font-size: 13px; width: 40%; height: 100%; }
     .redes{ width: 60%; padding-top: 2%; }
-    .imagen{ height: 40px; margin-right: 5px; margin-left: 4px;}
-
+    .imagen{ height: 40px; margin-right: 5px; margin-left: 4px; }
 }
 
 @media only screen and (max-width: 560px) {
@@ -214,8 +237,32 @@
     // SOBRE ESTE SITIO
     .sobre{ margin-bottom: 15px; font-size: 18px; }
     // COPYRIGHT Y REDES SOCIALES
-    .derechos{ text-align: center; padding-top: 2%; padding-left: 4%; font-size: 13px; }
+    .derechos{ text-align: center; padding-top: 2%; padding-left: 0%; font-size: 13px; }
     .texto-siguenos{ padding: 2.5% 5% 0% 0%; font-size: 13px; width: 40%; height: 100%; }
     .redes{ width: 60%; padding-top: 0%; }
     .imagen{ height: 40px; margin-right: 5px; margin-left: 4px;}
+}
+
+@media only screen and (max-width: 376px) {
+    .footer1{ padding-bottom: 15px; }
+    .grupo{ padding: 25px 20px 5px 20px; }
+    .texto-sobre{ padding: 2% 0% 3% 5%; font-size: 11px; }
+    // UBICACION
+    .ubicacion{ font-size: 16px; }
+    .texto-ubicacion{ margin-bottom: 20px; font-size: 11px; }
+    // CONTACTO
+    .contacto{ font-size: 16px; }
+    .texto-contacto{ font-size: 11px; }
+    .btn-contacto{ float: center; font-size: 11px; padding: 3%; margin-top: 4%; width: 100%; height: auto}
+    .contact{ display: none; }
+    .btn-libro{ float: center; font-size: 11px; padding: 3%; margin-top: 3%; width: 100%; height: auto }
+    .libro{ display: none;}
+    // SOBRE ESTE SITIO
+    .sobre{ margin-bottom: 15px; font-size: 16px; }
+    // COPYRIGHT Y REDES SOCIALES
+    .derechos{ text-align: center; padding-top: 2%; padding-left: 5%; padding-right: 5%; font-size: 11px; }
+    .texto-siguenos{ padding: 2.5% 5% 0% 0%; font-size: 12px; width: 40%; height: 100%; }
+    .redes{ width: 60%; padding-top: 0%; }
+    .imagen{ height: 30px; margin-right: 5px; margin-left: 4px;}
+    .flechita{ width: 4%; height: auto;}
 }

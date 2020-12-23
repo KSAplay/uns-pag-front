@@ -12,7 +12,12 @@ export class ComunicadosComponent implements OnInit {
 
   responsiveOptions: any[] = [
     {
-        breakpoint: '1024px',
+        breakpoint: '2600px',
+        numVisible: 4,
+        numScroll: 4
+    },
+    {
+        breakpoint: '1800px',
         numVisible: 3,
         numScroll: 3
     },
