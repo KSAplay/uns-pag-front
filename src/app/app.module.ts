@@ -14,6 +14,8 @@ import { LogrosComponent } from './components/logros/logros.component';
 import { VinculosComponent } from './components/vinculos/vinculos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { SidenavService } from './services/sidenav.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     ComunicadosComponent,
     LogrosComponent,
     VinculosComponent,
-    FooterComponent
+    FooterComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     PrimengModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SidenavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

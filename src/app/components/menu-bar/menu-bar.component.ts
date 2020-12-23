@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SidenavService } from 'src/app/services/sidenav.service';
 
 @Component({
   selector: 'app-menu-bar',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
 
-  constructor() { }
+  display: boolean;
+
+  constructor(private sidenavService: SidenavService) {
+
+   }
 
   ngOnInit(): void {
+
+    this.sidenavService.currentDisplay.subscribe(display => this.display = display)
   }
+
+  activar(){
+    this.sidenavService.changeDisplay(true);
+  }
+
 
 }

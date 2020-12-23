@@ -5,6 +5,11 @@ import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
 import { GalleriaModule } from 'primeng/galleria';
 import { CarouselModule } from 'primeng/carousel';
+import {SidebarModule} from 'primeng/sidebar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MenuModule} from 'primeng/menu';
+import {PanelMenuModule} from 'primeng/panelmenu';
+
 
 @NgModule({
   declarations: [],
@@ -12,12 +17,21 @@ import { CarouselModule } from 'primeng/carousel';
     CommonModule,
     CardModule,
     GalleriaModule,
-    CarouselModule
+    CarouselModule,
+    SidebarModule,
+    BrowserAnimationsModule,
+    MenuModule,
+    PanelMenuModule
+    
   ],
   exports: [
     CardModule,
     GalleriaModule,
-    CarouselModule
+    CarouselModule,
+    SidebarModule,
+    BrowserAnimationsModule,
+    MenuModule,
+    PanelMenuModule
   ]
 })
 export class PrimengModule { }
