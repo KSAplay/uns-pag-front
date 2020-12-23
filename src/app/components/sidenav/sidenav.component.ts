@@ -79,39 +79,61 @@ export class SidenavComponent implements OnInit {
       },
 
       {
-        label: 'Postgrado',
+        label: 'POSTGRADO',
         items: [
-          { label: 'New' },
-          { label: 'Open' },
-          { label: 'Open' },
-          { label: 'Quit' }
+          {
+            label: 'MAESTRÍAS',
+            items: [
+              { label: 'Derecho Constitucional' },
+              { label: 'Derecho Penal' },
+              { label: 'Ciencias de Enfermería' },
+              { label: 'Ciencias de la Educación' },
+              { label: 'Ciencias Energéticas' },
+              { label: 'Gerencia de Industrias Agropecuarias' }
+            ]
+          },
+          {
+            label: 'DOCTORADOS',
+            items: [
+              { label: 'Concepcion del Doctorado' },
+              { label: 'Perfil del Doctor' },
+              { label: 'Matrícula' },
+              { label: 'Inversión' },
+              { label: 'Informes e Inscripciones' }
+            ]
+          }
         ]
       },
       {
-        label: 'Direcciones',
+        label: 'DIRECCIONES',
         items: [
-          { label: 'New' },
-          { label: 'Open' },
-          { label: 'Open' },
-          { label: 'Quit' }
+          { label: 'Rectorado' },
+          { label: 'Vicerrectorado Académico' },
+          { label: 'Vicerrectorado de Investigación' },
+          { label: 'Dirección General de Administración' }
         ]
       },
       {
-        label: 'C. de Produccion',
+        label: 'C. DE PRODUCCIÓN',
         items: [
-          { label: 'New' },
-          { label: 'Open' },
-          { label: 'Open' },
-          { label: 'Quit' }
+          { label: 'Centro Preuniversitario CEPUNS' },
+          { label: 'Centro de Idiomas CEIDUNS' },
+          { label: 'Centro de Cómputo CECOMP' },
+          { label: 'Institucion Educativa Experimental' },
+          { label: 'Planta Piloto Agroindustrial' }
         ]
       },
       {
-        label: 'Vinculos',
+        label: 'VÍNCULOS',
         items: [
-          { label: 'New' },
-          { label: 'Open' },
-          { label: 'Open' },
-          { label: 'Quit' }
+          { label: 'Universidad' },
+          { label: 'Directorio' },
+          { label: 'Intranet' },
+          { label: 'Defensoría Universitaria' },
+          { label: 'Licenciamiento' },
+          { label: 'Campus Virtual' },
+          { label: 'Correo UNS' },
+          { label: 'Trnasparencia' }
         ]
       }
     ];
