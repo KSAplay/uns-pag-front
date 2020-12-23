@@ -25,20 +25,15 @@ export class SidenavComponent implements OnInit {
       {
         label: 'ADMISIÓN',
         items: [
-          {
-            label: 'PROCESO DE ADMISIÓN',
-            items: [
-              { label: 'Proceso de inscripcioón' },
-              { label: 'Cronograma' },
-              { label: 'Derecho de Inscripción' },
-              { label: 'Inscripción Online' },
-              { label: 'Tabla de Conversiones' },
-              { label: 'Reglamento' },
-              { label: 'Temario' },
-              { label: 'Consejos' },
-              { label: 'Preguntas Frecuentes' }
-            ]
-          }
+          { label: 'Proceso de inscripción' },
+          { label: 'Cronograma' },
+          { label: 'Derecho de Inscripción' },
+          { label: 'Inscripción Online' },
+          { label: 'Tabla de Conversiones' },
+          { label: 'Reglamento' },
+          { label: 'Temario' },
+          { label: 'Consejos' },
+          { label: 'Preguntas Frecuentes' }
         ]
       },
       {
