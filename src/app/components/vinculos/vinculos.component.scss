@@ -44,6 +44,7 @@
     border-color: $rojoPrimario;
     border-radius: 5px;
 }
+
 /* BOTÓNES INACTIVOS (los cambios aqui aplican para el Boton Activo)*/
 ::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator button.p-link {
     margin-top: 15px;
@@ -63,21 +64,44 @@
     border-radius: 0px;
 }
 
+@media only screen and (min-width: 1800px) {
+    ::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator button.p-link {
+        margin-top: 25px;
+        border-radius: 8%;
+        border-width: 2.2px;
+        height: 16px;
+        width: 45px;
+    }
+    ::ng-deep div.logos button.p-link.p-ripple span.p-carousel-prev-icon{
+        font-size: 40px;
+    }
+    .vinculos{ font-size: 37px; }
+    .card{ margin-left: 15%; margin-right: 15%; }
+    .logo-img{ height: 150px; }
+    .logos { padding-right: 4%; padding-left: 4%; }
+}
+
 @media only screen and (max-width: 1025px) {
     .vinculos{ padding: 4% 0% 4% 10%; }
     .card{ margin-left: 6%; margin-right: 6%; }
     .logo-img{ height: 100px; }
+    ::ng-deep div.logos button.p-link.p-ripple span.p-carousel-prev-icon{
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
     .vinculos{ padding: 4% 0% 4% 10%; }
     .card{ margin-left: 5%; margin-right: 5%; }
     .logo-img{ height: 100px; }
+    ::ng-deep div.logos button.p-link.p-ripple span.p-carousel-prev-icon{
+        font-size: 18px;
+    }
 }
 
 @media only screen and (max-width: 560px) {
     ::ng-deep .logos ul  { display: none; }
-    .vinculos{ padding: 6% 0% 5% 13%; font-size: 20px; }
+    .vinculos{ display: block; text-align: center; padding: 6% 0% 5% 0%; font-size: 20px; }
     .card{ margin-left: 5%; margin-right: 5%; }
     .logos{ padding-bottom: 6%; padding-right: 0%; padding-left: 0%; }
     .logo-img {height: 90px;}
@@ -85,8 +109,16 @@
 
 @media only screen and (max-width: 380px) {
     ::ng-deep .logos ul  { display: none; }
-    .vinculos{ padding: 6% 0% 5% 13%; font-size: 20px; }
+    .vinculos{ display: block; text-align: center; padding: 6% 0% 5% 0%; font-size: 20px; }
     .card{ margin-left: 15%; margin-right: 15%; }
     .logos{ padding-bottom: 6%; padding-right: 8%; padding-left: 8%; }
     .logo-img {height: 95px;}
+}
+
+@media only screen and (max-width: 376px) {
+    ::ng-deep .logos ul  { display: none; }
+    .vinculos{ display: block; text-align: center; padding: 6% 0% 5% 0%; font-size: 18px; }
+    .card{ margin-left: 15%; margin-right: 15%; }
+    .logos{ padding-bottom: 6%; padding-right: 8%; padding-left: 8%; }
+    .logo-img {height: 75px;}
 }

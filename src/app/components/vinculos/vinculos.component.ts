@@ -11,6 +11,16 @@ export class VinculosComponent implements OnInit {
   logos: Image[];
   responsiveOptions = [
       {
+          breakpoint: '2600px',
+          numVisible: 6,
+          numScroll: 6      
+      },
+      {
+          breakpoint: '1800px',
+          numVisible: 5,
+          numScroll: 5      
+      },
+      {
           breakpoint: '1025px',
           numVisible: 4,
           numScroll: 4

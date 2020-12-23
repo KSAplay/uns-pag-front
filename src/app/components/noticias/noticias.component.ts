@@ -13,6 +13,16 @@ export class NoticiasComponent implements OnInit {
 
   responsiveOptions: any[] = [
     {
+        breakpoint: '2600px',
+        numVisible: 5,
+        numScroll: 5
+    },
+    {
+        breakpoint: '1800px',
+        numVisible: 4,
+        numScroll: 4
+    },
+    {
         breakpoint: '1024px',
         numVisible: 3,
         numScroll: 3

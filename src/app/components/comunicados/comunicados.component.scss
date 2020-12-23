@@ -71,10 +71,32 @@
     border-radius: 0px;
 }
 
+
+@media only screen and (min-width: 1800px) {
+    ::ng-deep .events .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+        margin-top: 25px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border-width: 4px;
+        margin-left: 10px;
+        height: 22px;
+        width: 45px;
+    }
+    ::ng-deep .events .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+        border-radius: 10px;
+    }
+    ::ng-deep .events button.p-link.p-ripple span.p-carousel-prev-icon{
+        font-size: 40px;
+    }
+    .comunicados{ font-size: 37px; padding: 2.5% 0% 2.5% 6%; }
+    .card{ margin: 0% 5%;}
+    .com-img{ height: 500px; }
+}
+
 @media only screen and (max-width: 1080px) {
     .comunicados{ padding: 4% 0% 4% 10%; }
     .card{ margin: 0% 2%;}
-    .com-img{ height: 350px; }
+    .com-img{ height: 310px; }
 }
 
 @media only screen and (max-width: 850px) {
@@ -92,12 +114,32 @@
 
 @media only screen and (max-width: 560px) {
     ::ng-deep .events ul { display: none; }
-    .comunicados{ padding: 6% 0% 5% 13%; font-size: 20px; }
+    .comunicados{ display: block; text-align: center; padding: 6% 0% 5% 0%; font-size: 20px; }
     .events{ padding-left: 0%; padding-right: 0%; padding-bottom: 8%; }
     .card{ margin: 0% 2%;}
     .com-img{ height: 430px; }
 }
 
 @media only screen and (max-width: 450px) {
+    .comunicados{ display: block; text-align: center; padding: 6% 0% 5% 0%; font-size: 20px; }
+    ::ng-deep .events ul { display: none; }
     .com-img{ height: 350px; }
+}
+
+@media only screen and (max-width: 376px) {
+    ::ng-deep .events ul { display: none; }
+    .comunicados{ display: block; text-align: center; padding: 6% 0% 5% 0%; font-size: 18px; }
+    .events{ padding-left: 0%; padding-right: 0%; padding-bottom: 8%; }
+    .card{ margin: 0% 2%;}
+    .com-img{ height: 300px; }
+    .text-block{ font-size: 14px; }
+}
+
+@media only screen and (max-width: 330px) {
+    ::ng-deep .events ul { display: none; }
+    .comunicados{ display: block; text-align: center; padding: 6% 0% 5% 0%; font-size: 18px; }
+    .events{ padding-left: 0%; padding-right: 0%; padding-bottom: 8%; }
+    .card{ margin: 0% 2%;}
+    .com-img{ height: 240px; }
+    .text-block{ font-size: 12px; }
 }
