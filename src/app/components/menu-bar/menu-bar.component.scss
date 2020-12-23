@@ -1,9 +1,11 @@
 
 @import "../../../shared/colores.scss";
 
-.menu-logo{
-
-}
+.logo-uns {
+  width: auto;
+  height: 80px;
+  margin-top: 10px;
+  margin-left: 25px;}
 
 .menu-icon{
   font-size: 14px;
@@ -17,30 +19,11 @@
   display: none;
 }
 
-@media screen and (max-width: 1055px) { //APARECER Y DESAPARECER ICONO
-  .menu-logo {display: none;}
-}
-
-@media screen and (max-width: 880px) { //APARECER Y DESAPARECER ICONO
-  .menu-icon {display: none;}
-  .menu-icon {
-    float: right;
-    display: block;
-    
-  }
-
-  .menu-contenido { float: right;
-    display: block;}
-  .menu-contenido {
-    display: none;
-  }
-}
-
 .linea{
   margin: 0px 16px;
   background-color: white;
   width: auto;
-  height: 1px;
+  height: 2px;
 }
 
 .search {
@@ -204,3 +187,37 @@ body .dribbble img {
 }
 
 
+@media only screen and (min-width: 1800px) {
+  .search input{font-size: 27px;}
+  .navbar a { font-size: 25px; }
+  .dropdown .dropbtn { font-size: 27px; padding: 40px 50px 14px 50px; }
+  .logo-uns { width: auto; height: 150px; margin-top: 20px; margin-left: 50px;}
+}
+
+@media only screen and (max-width: 1100px) {
+  .logo-uns { height: 50px; margin-top: 5px; margin-left: 10px;}
+  .dropdown .dropbtn { font-size: 13px; padding: 14px 14px 14px 14px; }
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu-icon {display: none;}
+  .menu-icon {
+    float: right;
+    display: block;
+    
+  }
+
+  .menu-contenido { float: right;
+    display: block;}
+  .menu-contenido {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .logo-uns { height: 40px; margin-top: 3px; margin-left: 8px;}
+}
+
+@media only screen and (max-width: 376px) {
+  .logo-uns { height: 30px; margin-top: 2px; margin-left: 6px;}
+}
