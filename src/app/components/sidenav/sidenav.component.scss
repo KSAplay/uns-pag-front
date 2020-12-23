@@ -1,0 +1,40 @@
+
+
+@import '../../../shared/colores.scss';
+
+
+::ng-deep div.p-sidebar.p-sidebar-right{
+    background: scroll;
+    background-color: $rojoPrimario;
+    height: auto;
+    border-radius: 0 0% 0% 3%;
+}
+
+::ng-deep div.p-component.p-panelmenu-header a.p-panelmenu-header-link{
+    background-color: white;
+    color: $rojoPrimario;
+    border-width: 0px 0px 4px 0px;
+    border-color: $rojoPrimario;
+}
+
+::ng-deep div.p-component.p-panelmenu-header:hover a.p-panelmenu-header-link:hover {
+    background-color: $footer1;
+    color: white;
+    border-width: 0px 0px 0px 0px;
+}
+
+::ng-deep div.p-component.p-panelmenu-header.p-highlight a.p-panelmenu-header-link{
+    background-color: $footer1;
+    color: white;
+    border-width: 0px 0px 0px 0px;
+}
+
+::ng-deep div.p-component.p-panelmenu-header.p-highlight:hover a.p-panelmenu-header-link:hover{
+    background-color: $footer1;
+    color: white;
+    border-width: 0px 0px 0px 0px;
+}
+
+::ng-deep span.p-menuitem-text {
+    font-size: 14px;
+}
