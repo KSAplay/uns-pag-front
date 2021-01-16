@@ -5,10 +5,17 @@
 
 <!-- Componentes a organizar -->
 
-<app-noticias></app-noticias>
-<app-comunicados></app-comunicados>
-<app-logros></app-logros>
-<app-vinculos></app-vinculos>
+<div *ngFor="let seccion of secciones">
+    <ng-container *ngComponentOutlet="getComponente(seccion.frontend_id)"></ng-container>
+  </div>
+
+
+      
+
+  
+
+
+
 
 <!-- ----------------------- -->
 
