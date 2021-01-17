@@ -20,7 +20,7 @@
 }
 
 .events{
-    background-color: $rojoPrimario;
+    background-color:$rojoPrimario;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -30,11 +30,13 @@
     text-align: center;
     background-color: white;
     border-radius: 5px;
-    margin: 0% 6%;
+    margin: 3% 6%;
     padding: 3%;
     width: auto;
     height: auto;
     position: relative;
+    -webkit-filter: drop-shadow(3px 3px 5px #0000003a);
+    filter: drop-shadow(3px 3px 5px #0000003a);
 }
 
 .com-img{
@@ -46,7 +48,7 @@
 
 
 ::ng-deep .events .p-carousel .p-carousel-indicators .p-carousel-indicator button {
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 10px;
     background-color: transparent;
     border-radius: 5px;

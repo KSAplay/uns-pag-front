@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Noticia } from 'src/app/models/noticia';
+import { Tema } from 'src/app/models/tema';
 import { NoticiasService } from 'src/app/services/noticias.service';
 
 @Component({
@@ -10,6 +11,8 @@ import { NoticiasService } from 'src/app/services/noticias.service';
 export class NoticiasComponent implements OnInit {
 
   noticias: Noticia[];
+  tema: Tema[];
+  prueba: string = "background: red";
 
   responsiveOptions: any[] = [
     {
@@ -41,11 +44,17 @@ export class NoticiasComponent implements OnInit {
 
   constructor(private noticiasService: NoticiasService) {
     this.noticias = [];
+    this.tema = [];
   }
 
   ngOnInit(): void {
     this.noticiasService.getNoticias().then(noticias =>{ 
       this.noticias = noticias
+    });
+
+    this.noticiasService.obtenerTema().then(tema =>{ 
+      this.tema = tema;
+      console.log(this.tema);
     });
   }
 
