@@ -8,6 +8,9 @@
         },
         {
             "frontend_id": "ComunicadosComponent"
+        },
+        {
+            "frontend_id": "LogrosComponent"
         }
     ]
 }
