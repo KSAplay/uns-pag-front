@@ -54,8 +54,6 @@ export class NoticiasComponent implements OnInit {
 
     this.noticiasService.obtenerTema().then(tema =>{ 
       this.tema = tema;
-      console.log(this.tema);
     });
   }
-
 }
