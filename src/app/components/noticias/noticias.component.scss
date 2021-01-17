@@ -75,7 +75,7 @@
 }
 
 
-::ng-deep .news .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+::ng-deep .news .p-carousel .p-carousel-indicators button {
     padding-top: 0;
     margin-top: 5px;
     background-color: transparent;
@@ -88,11 +88,14 @@
 
 }
 
-::ng-deep .news .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-    
-    background-color: $rojoPrimario;
-    border-color: $rojoPrimario;
-    border-radius: 5px;
+.news{
+    ::ng-deep{
+        .p-carousel .p-carousel-indicators .p-highlight button {
+            background-color: $rojoPrimario;
+            border-color: $rojoPrimario;
+            border-radius: 5px;
+        }
+    } 
 }
 
 /* FLECHAS DE LOS COSTADOS */

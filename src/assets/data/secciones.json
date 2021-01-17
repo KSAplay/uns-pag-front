@@ -1,9 +1,6 @@
 {
     "data":[
         {
-            "frontend_id": "VinculosComponent"
-        },
-        {
             "frontend_id": "NoticiasComponent"
         },
         {
@@ -11,6 +8,9 @@
         },
         {
             "frontend_id": "LogrosComponent"
+        },
+        {
+            "frontend_id": "VinculosComponent"
         }
     ]
 }

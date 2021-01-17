@@ -8,7 +8,7 @@ import { Tema } from '../models/tema';
 })
 export class NoticiasService {
 
-  prueba: string = "Blanco";
+  prueba: string = "Blanco"; // Rojo, Blanco o Gris
 
   constructor(private http: HttpClient) { }
 
