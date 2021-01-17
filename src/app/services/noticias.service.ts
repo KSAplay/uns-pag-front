@@ -8,7 +8,7 @@ import { Tema } from '../models/tema';
 })
 export class NoticiasService {
 
-  prueba: string = "Blanco"; // Rojo, Blanco o Gris
+  prueba: string = "Rojo"; // Rojo, Blanco o Gris
 
   constructor(private http: HttpClient) { }
 
@@ -21,10 +21,10 @@ export class NoticiasService {
   }
 
   /* ----------- OBTENER TEMA ----------- */
-  obtenerTema(): Promise<Tema[]> {
+  obtenerTema(): Promise<Tema> {
     return this.http.get<any>('assets/data/tema'+this.prueba+'.json')
       .toPromise()
-      .then(res => <Tema[]>res.data)
+      .then(res => <Tema>res.data)
       .then(data => { return data; });
   }
 }

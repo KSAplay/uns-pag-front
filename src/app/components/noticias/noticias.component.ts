@@ -11,8 +11,7 @@ import { NoticiasService } from 'src/app/services/noticias.service';
 export class NoticiasComponent implements OnInit {
 
   noticias: Noticia[];
-  tema: Tema[];
-  prueba: string = "background: red";
+  tema = new Tema();
 
   responsiveOptions: any[] = [
     {
@@ -44,7 +43,6 @@ export class NoticiasComponent implements OnInit {
 
   constructor(private noticiasService: NoticiasService) {
     this.noticias = [];
-    this.tema = [];
   }
 
   ngOnInit(): void {
@@ -52,15 +50,24 @@ export class NoticiasComponent implements OnInit {
       this.noticias = noticias
     });
 
-    this.noticiasService.obtenerTema().then(tema =>{ 
-      this.tema = tema;
+    this.noticiasService.obtenerTema().then(theme =>{ 
+      this.tema = theme;
+      console.log(this.tema);
     });
 
-    this.aplicarTema();
+    setTimeout(() => {  console.log(this.tema)  }, 1000);
+    //this.aplicarTema(this.tema);
   }
 
-  aplicarTema(){
-    document.documentElement.style.setProperty('--noticias-color', 'yellow');
+  aplicarTema(tema: Tema){
+
+    // Carrousel Flechas
+    document.documentElement.style.setProperty('--noticias-flechas', tema.color_flecha_carrousel);
+    // Carrousel Boton Activo
+    document.documentElement.style.setProperty('--noticias-btnBordeActivo', tema.color_btn_carrousel_borde_activo);
+    document.documentElement.style.setProperty('--noticias-btnRellenoActivo', tema.color_btn_carrousel_relleno_activo);
+    // Carrousel Boton inactivo
+    document.documentElement.style.setProperty('--noticias-btnBordeInactivo', tema.color_btn_carrousel_borde_inactivo);
   }
 
 }

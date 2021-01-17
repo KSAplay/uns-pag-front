@@ -1,9 +1,9 @@
 
-<div [ngStyle]="{'color': tema[0].color_titulo , 'background-color': tema[0].color_fondo}" class="p-grid noticias">
+<div [ngStyle]="{'color': tema.color_titulo , 'background-color': tema.color_fondo}" class="p-grid noticias">
     <b>NOTICIAS</b>
 </div>
 
-<div class="p-grid news" [ngStyle]="{'background-color': tema[0].color_fondo }">
+<div class="p-grid news" [ngStyle]="{'background-color': tema.color_fondo }">
     <div class="p-col-12">
         <p-carousel [value]="noticias" [numVisible]="4" [numScroll]="4" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions" 
         [style]="{}">

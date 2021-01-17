@@ -1,22 +1,26 @@
 
-//@import "../../../shared/colores.scss";
+@import "../../../shared/colores.scss";
 
-$rojoPrimario: var(--noticias-color);
+// VARIABLES
+$Flechas: var(--noticias-flechas);
+$BordeActivo: var(--noticias-btnBordeActivo);
+$RellenoActivo: var(--noticias-btnRellenoActivo);
+$BordeInactivo: var(--noticias-btnBordeInactivoo);
 
 ::ng-deep .p-component {
     font-family: 'PT Sans', sans-serif;
 }
 
 .noticias{
-    background-color: white;
+    //background-color: white;
     height: auto;
     font-size: 23px;
     padding: 3% 0% 2% 6%;
-    color: $rojoPrimario; 
+    //color: $rojoPrimario; 
 }
 
 .news{
-    background-color: white;
+    //background-color: white;
     padding-left: 3%;
     padding-right: 3%;
     padding-bottom: 0.5%;
@@ -82,7 +86,7 @@ $rojoPrimario: var(--noticias-color);
     background-color: transparent;
     border-radius: 5px;
     border-style: solid;
-    border-color: var(--noticias-color);
+    border-color: $BordeInactivo;
     border-width: 2.2px;
     height: 12px;
     width: 25px;
@@ -92,17 +96,17 @@ $rojoPrimario: var(--noticias-color);
 .news{
     ::ng-deep{
         .p-carousel .p-carousel-indicators .p-highlight button {
-            background-color: $rojoPrimario;
-            border-color: $rojoPrimario;
+            background-color: $RellenoActivo;
+            border-color: $BordeActivo;
             border-radius: 5px;
         }
     } 
 }
 
-FLECHAS DE LOS COSTADOS 
+
 ::ng-deep .news button.p-link.p-ripple span.p-carousel-prev-icon{
     font-weight: bolder;
-    color: $rojoPrimario;
+    color: $Flechas;
     border-radius: 0px;
 }
 
