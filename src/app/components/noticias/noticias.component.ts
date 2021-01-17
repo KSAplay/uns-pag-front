@@ -55,5 +55,12 @@ export class NoticiasComponent implements OnInit {
     this.noticiasService.obtenerTema().then(tema =>{ 
       this.tema = tema;
     });
+
+    this.aplicarTema();
   }
+
+  aplicarTema(){
+    document.documentElement.style.setProperty('--noticias-color', 'yellow');
+  }
+
 }

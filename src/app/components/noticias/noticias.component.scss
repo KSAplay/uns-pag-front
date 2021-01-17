@@ -1,5 +1,7 @@
 
-@import "../../../shared/colores.scss";
+//@import "../../../shared/colores.scss";
+
+$rojoPrimario: var(--noticias-color);
 
 ::ng-deep .p-component {
     font-family: 'PT Sans', sans-serif;
@@ -74,14 +76,13 @@
     //margin-bottom: 8%;
 }
 
-
 ::ng-deep .news .p-carousel .p-carousel-indicators button {
     padding-top: 0;
     margin-top: 5px;
     background-color: transparent;
     border-radius: 5px;
     border-style: solid;
-    border-color: $grisbotonCarrusel;
+    border-color: var(--noticias-color);
     border-width: 2.2px;
     height: 12px;
     width: 25px;
@@ -98,7 +99,7 @@
     } 
 }
 
-/* FLECHAS DE LOS COSTADOS */
+FLECHAS DE LOS COSTADOS 
 ::ng-deep .news button.p-link.p-ripple span.p-carousel-prev-icon{
     font-weight: bolder;
     color: $rojoPrimario;
