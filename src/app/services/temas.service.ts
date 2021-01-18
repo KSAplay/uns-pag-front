@@ -8,7 +8,7 @@ import { HOST } from '../../shared/var.constant';
 })
 export class TemasService {
 
-  url = HOST;
+  url: string = `${HOST}/temas`
 
   constructor(private http: HttpClient) { }
 
@@ -16,7 +16,7 @@ export class TemasService {
   //                    OBTENER TEMA SEGUN COMPONENTE
   // ---------------------------------------------------------------------
   obtenerTema(frontendid: string): Promise<Tema>{
-    return this.http.get<any>(`${this.url}/api/temas/seccion/frontendid/${frontendid}`)
+    return this.http.get<any>(`${this.url}/seccion/frontendid/${frontendid}`)
         .toPromise()
         .then(res => <Tema>res.data)
         .then(data => { return data; });
