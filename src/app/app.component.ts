@@ -28,7 +28,6 @@ export class AppComponent  implements OnInit{
   getSeccionesOrden(){
     this.seccionesService.getSeccionesOrden().then(secciones =>{
       this.secciones = secciones;
-      console.log(this.secciones); //ESTO NO SE ME IMPRIME
     })
   }
 
