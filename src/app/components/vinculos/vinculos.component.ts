@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Image } from 'src/app/models/image';
 import { Tema } from 'src/app/models/tema';
-import { VinculosService } from 'src/app/services/vinculos.service';
+import { TemasService } from 'src/app/services/temas.service';
 
 @Component({
   selector: 'app-vinculos',
@@ -45,14 +45,14 @@ export class VinculosComponent implements OnInit {
       }
   ];
 
-  constructor(private vinculosService: VinculosService) {
+  constructor(private temasService: TemasService) {
     this.logos = [];
   }
 
   ngOnInit(): void {
 
-    this.vinculosService.obtenerTema().then(theme =>{ 
-      this.tema = theme[0];
+    this.temasService.obtenerTema('VinculosComponent').then(theme =>{ 
+      this.tema = theme;
     });
 
     this.logos = [
@@ -64,7 +64,7 @@ export class VinculosComponent implements OnInit {
       {srcImage : "assets/images/vinculos/beca-presidente.png", alt : 'Beca Presidente'}
     ];
 
-    setTimeout(() => {this.aplicarTema(this.tema)}, 500);
+    setTimeout(() => {this.aplicarTema(this.tema)}, 1000);
   }
 
   aplicarTema(tema: Tema){

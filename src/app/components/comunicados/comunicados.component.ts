@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Comunicado } from 'src/app/models/comunicado';
 import { ComunicadosService } from 'src/app/services/comunicados.service';
+import { TemasService } from 'src/app/services/temas.service';
 import { Tema } from 'src/app/models/tema';
 
 @Component({
@@ -35,7 +36,7 @@ export class ComunicadosComponent implements OnInit {
     }
   ];
 
-  constructor(private comunicadosService:ComunicadosService) {
+  constructor(private comunicadosService:ComunicadosService, private temasService: TemasService) {
     this.comunicados=[];
   }
 
@@ -44,11 +45,11 @@ export class ComunicadosComponent implements OnInit {
       this.comunicados = comunicados
     });
 
-    this.comunicadosService.obtenerTema().then(theme =>{ 
-      this.tema = theme[0];
+    this.temasService.obtenerTema('ComunicadosComponent').then(theme =>{ 
+      this.tema = theme;
     });
 
-    setTimeout(() => {this.aplicarTema(this.tema)}, 500);
+    setTimeout(() => {this.aplicarTema(this.tema)}, 1000);
   }
 
   aplicarTema(tema: Tema){

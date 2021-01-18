@@ -1,4 +1,5 @@
 export class Tema {
+    id_tema: number;
     descripcion : string;
     color_titulo: string;
     color_fondo: string;

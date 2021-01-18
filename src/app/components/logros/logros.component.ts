@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tema } from 'src/app/models/tema';
-import { LogrosService } from 'src/app/services/logros.service';
+import { TemasService } from 'src/app/services/temas.service';
 
 @Component({
   selector: 'app-logros',
@@ -12,16 +12,16 @@ export class LogrosComponent implements OnInit {
   tema = new Tema();
   colorImg: string;
 
-  constructor(private logrosService: LogrosService) {
+  constructor(private temasService: TemasService) {
     this.colorImg = "rojo";
   }
 
   ngOnInit(): void {
-    this.logrosService.obtenerTema().then(theme =>{ 
-      this.tema = theme[0];
+    this.temasService.obtenerTema('LogrosComponent').then(theme =>{ 
+      this.tema = theme;
     });
 
-    setTimeout(() => {this.aplicarTema(this.tema)}, 500);
+    setTimeout(() => {this.aplicarTema(this.tema)}, 1000);
   }
   
   aplicarTema(tema: Tema){

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Noticia } from 'src/app/models/noticia';
 import { Tema } from 'src/app/models/tema';
 import { NoticiasService } from 'src/app/services/noticias.service';
+import { TemasService } from 'src/app/services/temas.service';
 
 @Component({
   selector: 'app-noticias',
@@ -41,7 +42,7 @@ export class NoticiasComponent implements OnInit {
     }
   ];
 
-  constructor(private noticiasService: NoticiasService) {
+  constructor(private noticiasService: NoticiasService, private temasService: TemasService) {
     this.noticias = [];
   }
 
@@ -50,11 +51,12 @@ export class NoticiasComponent implements OnInit {
       this.noticias = noticias
     });
 
-    this.noticiasService.obtenerTema().then(theme =>{ 
-      this.tema = theme[0];
+    this.temasService.obtenerTema('NoticiasComponent').then(theme =>{ 
+      this.tema = theme;
+      console.log(theme);
     });
 
-    setTimeout(() => {this.aplicarTema(this.tema)}, 500);
+    setTimeout(() => {this.aplicarTema(this.tema)}, 1000);
   }
 
   aplicarTema(tema: Tema){
