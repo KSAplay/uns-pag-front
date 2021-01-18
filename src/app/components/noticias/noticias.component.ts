@@ -51,16 +51,13 @@ export class NoticiasComponent implements OnInit {
     });
 
     this.noticiasService.obtenerTema().then(theme =>{ 
-      this.tema = theme;
-      console.log(this.tema);
+      this.tema = theme[0];
     });
 
-    setTimeout(() => {  console.log(this.tema)  }, 1000);
-    //this.aplicarTema(this.tema);
+    setTimeout(() => {this.aplicarTema(this.tema)}, 500);
   }
 
   aplicarTema(tema: Tema){
-
     // Carrousel Flechas
     document.documentElement.style.setProperty('--noticias-flechas', tema.color_flecha_carrousel);
     // Carrousel Boton Activo

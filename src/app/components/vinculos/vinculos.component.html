@@ -1,9 +1,9 @@
 
-<div class="p-grid vinculos">
+<div [ngStyle]="{'color': tema.color_titulo , 'background-color': tema.color_fondo}" class="p-grid vinculos">
     <b>VÍNCULOS DE INTERÉS</b>
 </div>
 
-<div class="p-grid logos">
+<div [ngStyle]="{'background-color': tema.color_fondo}" class="p-grid logos">
     <div class="p-col-12">
         <p-carousel [value]="logos" styleClass="carrucel" [numVisible]="5" [numScroll]="5" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
             <ng-template let-log pTemplate="item">

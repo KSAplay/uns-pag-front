@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Comunicado } from 'src/app/models/comunicado';
 import { ComunicadosService } from 'src/app/services/comunicados.service';
+import { Tema } from 'src/app/models/tema';
 
 @Component({
   selector: 'app-comunicados',
@@ -9,6 +10,7 @@ import { ComunicadosService } from 'src/app/services/comunicados.service';
 })
 export class ComunicadosComponent implements OnInit {
   comunicados: Comunicado[];
+  tema = new Tema();
 
   responsiveOptions: any[] = [
     {
@@ -41,6 +43,22 @@ export class ComunicadosComponent implements OnInit {
     this.comunicadosService.getComunicados().then(comunicados =>{ 
       this.comunicados = comunicados
     });
+
+    this.comunicadosService.obtenerTema().then(theme =>{ 
+      this.tema = theme[0];
+    });
+
+    setTimeout(() => {this.aplicarTema(this.tema)}, 500);
+  }
+
+  aplicarTema(tema: Tema){
+    // Carrousel Flechas
+    document.documentElement.style.setProperty('--comunicados-flechas', tema.color_flecha_carrousel);
+    // Carrousel Boton Activo
+    document.documentElement.style.setProperty('--comunicados-btnBordeActivo', tema.color_btn_carrousel_borde_activo);
+    document.documentElement.style.setProperty('--comunicados-btnRellenoActivo', tema.color_btn_carrousel_relleno_activo);
+    // Carrousel Boton inactivo
+    document.documentElement.style.setProperty('--comunicados-btnBordeInactivo', tema.color_btn_carrousel_borde_inactivo);
   }
 
 }

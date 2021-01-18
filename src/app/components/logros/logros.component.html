@@ -1,31 +1,31 @@
 
-<div class="p-grid logros">
+<div [ngStyle]="{'color': tema.color_titulo , 'background-color': tema.color_fondo}" class="p-grid logros">
     <b>LOGROS</b>
 </div>
 
-<div class="p-grid logros2">
+<div [ngStyle]="{'color': tema.color_titulo , 'background-color': tema.color_fondo}" class="p-grid logros2">
     <div class="p-lg-2 p-md-4 p-col-6">
-        <img class="carreras-img" src="assets/images/logros/carreras.png" alt="Carreras Acreditadas"><br>
+        <img class="carreras-img" [src]="'assets/images/logros/carreras-'+colorImg+'.png'" alt="Carreras Acreditadas"><br>
         <strong>CARRERAS<br>ACREDITADAS</strong>
     </div>
     <div class="p-lg-2 p-md-4 p-col-6">
-        <img class="alumnos-img" src="assets/images/logros/alumnos.png" alt="Alumnos Becarios"><br>
+        <img class="alumnos-img" [src]="'assets/images/logros/alumnos-'+colorImg+'.png'" alt="Alumnos Becarios"><br>
         <strong>ALUMNOS<br>BECARIOS</strong>
     </div>
     <div class="p-lg-2 p-md-4 p-col-6 convenios">
-        <img class="convenios-img" src="assets/images/logros/convenios.png" alt="Convenios Firmados"><br>
+        <img class="convenios-img" [src]="'assets/images/logros/convenios-'+colorImg+'.png'" alt="Convenios Firmados"><br>
         <strong>CONVENIOS<br>FIRMADOS</strong>
     </div>
     <div class="p-lg-2 p-md-4 p-col-6">
-        <img class="investigaciones-img" src="assets/images/logros/investigaciones.png" alt="Investigaciones Publicadas"><br>
+        <img class="investigaciones-img" [src]="'assets/images/logros/investigaciones-'+colorImg+'.png'" alt="Investigaciones Publicadas"><br>
         <strong>INVESTIGACIONES<br>PUBLICADAS</strong>
     </div>
     <div class="p-lg-2 p-md-4 p-col-6">
-        <img class="fondos-img" src="assets/images/logros/fondos.png" alt="Fondos Concursables"><br>
+        <img class="fondos-img" [src]="'assets/images/logros/fondos-'+colorImg+'.png'" alt="Fondos Concursables"><br>
         <strong>FONDOS<br>CONCURSABLES</strong>
     </div>
     <div class="p-lg-2 p-md-4 p-col-6">
-        <img class="proyectos-img" src="assets/images/logros/proyectos.png" alt="Proyectos de Emprendimiento"><br>
+        <img class="proyectos-img" [src]="'assets/images/logros/proyectos-'+colorImg+'.png'" alt="Proyectos de Emprendimiento"><br>
         <strong>PROYECTOS DE<br>EMPRENDIMIENTO</strong>
     </div>
 </div>

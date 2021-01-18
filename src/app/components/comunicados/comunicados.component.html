@@ -1,9 +1,9 @@
 
-<div class="p-grid comunicados">
+<div [ngStyle]="{'color': tema.color_titulo , 'background-color': tema.color_fondo}" class="p-grid comunicados">
     <b>COMUNICADOS</b>
 </div>
 
-<div class="p-grid events">
+<div [ngStyle]="{'background-color': tema.color_fondo}" class="p-grid events">
     <div class="p-col-12">
         <p-carousel [value]="comunicados" [numVisible]="3" [numScroll]="3" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
             <ng-template let-comunicado pTemplate="item">

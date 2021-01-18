@@ -1,6 +1,11 @@
 
 @import '../../../shared/colores.scss';
 
+$Flechas: var(--comunicados-flechas);
+$BordeActivo: var(--comunicados-btnBordeActivo);
+$RellenoActivo: var(--comunicados-btnRellenoActivo);
+$BordeInactivo: var(--comunicados-btnBordeInactivo);
+
 .text-block{
     position: absolute;
     bottom: 3.9%;
@@ -12,7 +17,7 @@
 }
 
 .comunicados{
-    background-color: $rojoPrimario;
+    //background-color: $rojoPrimario;
     height: auto;
     font-size: 23px;
     padding: 2.5% 0px 2.5% 6%;
@@ -20,7 +25,7 @@
 }
 
 .events{
-    background-color:$rojoPrimario;
+    //background-color:$rojoPrimario;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -46,30 +51,30 @@
     height: 400px;
 }
 
-
+/* BOTONES INACTIVOS */
 ::ng-deep .events .p-carousel .p-carousel-indicators .p-carousel-indicator button {
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: transparent;
     border-radius: 5px;
     border-style: solid;
-    border-color: white;
+    border-color: $BordeInactivo;
     border-width: 2.2px;
     height: 12px;
     width: 25px;
 }
 
-
+/* BOTONES ACTIVOS */
 ::ng-deep .events .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-    background-color: white;
-    border-color: white;
+    background-color: $RellenoActivo;
+    border-color: $BordeActivo;
     border-radius: 5px;
 }
 
 /* FLECHAS DE LOS COSTADOS */
 ::ng-deep .events button.p-link.p-ripple span.p-carousel-prev-icon{
     font-weight: bolder;
-    color: white;
+    color: $Flechas;
     border-radius: 0px;
 }
 

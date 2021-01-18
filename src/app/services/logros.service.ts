@@ -1,24 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Noticia } from '../models/noticia';
 import { Tema } from '../models/tema';
 
 @Injectable({
   providedIn: 'root'
 })
-export class NoticiasService {
+export class LogrosService {
 
   prueba: string = "Blanco"; // Rojo, Blanco o Gris
 
   constructor(private http: HttpClient) { }
-
-  /* ----------- OBTENER NOTICIAS ----------- */
-  getNoticias(): Promise<Noticia[]> {
-    return this.http.get<any>('assets/data/noticias.json')
-      .toPromise()
-      .then(res => <Noticia[]>res.data)
-      .then(data => { return data; });
-  }
 
   /* ----------- OBTENER TEMA ----------- */
   obtenerTema(): Promise<Tema> {
@@ -27,4 +18,5 @@ export class NoticiasService {
       .then(res => <Tema>res.data)
       .then(data => { return data; });
   }
+
 }

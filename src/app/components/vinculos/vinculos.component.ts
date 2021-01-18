@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Image } from 'src/app/models/image';
+import { Tema } from 'src/app/models/tema';
+import { VinculosService } from 'src/app/services/vinculos.service';
 
 @Component({
   selector: 'app-vinculos',
@@ -8,6 +10,7 @@ import { Image } from 'src/app/models/image';
 })
 export class VinculosComponent implements OnInit {
 
+  tema = new Tema();
   logos: Image[];
   responsiveOptions = [
       {
@@ -42,11 +45,16 @@ export class VinculosComponent implements OnInit {
       }
   ];
 
-  constructor() {
+  constructor(private vinculosService: VinculosService) {
     this.logos = [];
   }
 
   ngOnInit(): void {
+
+    this.vinculosService.obtenerTema().then(theme =>{ 
+      this.tema = theme[0];
+    });
+
     this.logos = [
       {srcImage : 'assets/images/vinculos/uniBernardo.png', alt : 'Universidad Bernardo OHIGGIN'},
       {srcImage : "assets/images/vinculos/science-direct.png", alt : 'Science Direct'},
@@ -55,6 +63,18 @@ export class VinculosComponent implements OnInit {
       {srcImage : "assets/images/vinculos/pronabec.png", alt : 'Pronabec'},
       {srcImage : "assets/images/vinculos/beca-presidente.png", alt : 'Beca Presidente'}
     ];
+
+    setTimeout(() => {this.aplicarTema(this.tema)}, 500);
+  }
+
+  aplicarTema(tema: Tema){
+    // Carrousel Flechas
+    document.documentElement.style.setProperty('--vinculos-flechas', tema.color_flecha_carrousel);
+    // Carrousel Boton Activo
+    document.documentElement.style.setProperty('--vinculos-btnBordeActivo', tema.color_btn_carrousel_borde_activo);
+    document.documentElement.style.setProperty('--vinculos-btnRellenoActivo', tema.color_btn_carrousel_relleno_activo);
+    // Carrousel Boton inactivo
+    document.documentElement.style.setProperty('--vinculos-btnBordeInactivo', tema.color_btn_carrousel_borde_inactivo);
   }
 
 }

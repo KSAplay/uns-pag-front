@@ -1,22 +1,21 @@
 
 @import '../../../shared/colores.scss';
 
-.titulo{
-    margin-top: 40px;
-    margin-left: 80px;
-    color: $rojoPrimario;
-}
+$Flechas: var(--vinculos-flechas);
+$BordeActivo: var(--vinculos-btnBordeActivo);
+$RellenoActivo: var(--vinculos-btnRellenoActivo);
+$BordeInactivo: var(--vinculos-btnBordeInactivo);
 
 .vinculos{
-    background-color: $grisVinculos;
+    //background-color: $grisVinculos;
     height: auto;
     font-size: 23px;
     padding: 2.5% 0px 2.5% 6%;
-    color: $rojoPrimario;
+    //color: $rojoPrimario;
 }
 
 .logos{
-    background-color: $grisVinculos;
+    //background-color: $grisVinculos;
     height: auto;
     padding-right: 38px;
     padding-left: 38px;
@@ -38,29 +37,29 @@
     height: 110px;
 }
 
-/* BOTON ACTIVO (Los cambios sobreescriben el de los Inactivos)*/
-::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator.p-highlight button.p-link {
-    background-color: $rojoPrimario;
-    border-color: $rojoPrimario;
-    border-radius: 5px;
-}
-
 /* BOTÓNES INACTIVOS (los cambios aqui aplican para el Boton Activo)*/
 ::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator button.p-link {
     margin-top: 15px;
     background-color: transparent;
     border-radius: 5px;
     border-style: solid;
-    border-color: $grisbotonCarrusel;
+    border-color: $BordeInactivo;
     border-width: 2.2px;
     height: 12px;
     width: 25px;
 }
 
+/* BOTON ACTIVO (Los cambios sobreescriben el de los Inactivos)*/
+::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator.p-highlight button.p-link {
+    background-color: $RellenoActivo;
+    border-color: $BordeActivo;
+    border-radius: 5px;
+}
+
 /* FLECHAS DE LOS COSTADOS */
 ::ng-deep div.logos button.p-link.p-ripple span.p-carousel-prev-icon{
     font-weight: bolder;
-    color: $rojoPrimario;
+    color: $Flechas;
     border-radius: 0px;
 }
 
