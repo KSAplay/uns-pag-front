@@ -1,6 +1,9 @@
-export interface Noticia {
-    srcImage : string;
-    title: string;
-    fecha: string;
-    visible: string;
+
+export class Noticia{
+    id_noticia:number;
+    titular: string;
+    fecha_noticia: Date;
+    visible: boolean;
+    nombre_imagen: string;
+    host_imagen: string;
 }

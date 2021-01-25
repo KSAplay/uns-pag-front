@@ -12,13 +12,14 @@ export class SidenavComponent implements OnInit {
 
   display: boolean;
 
-  items: MenuItem[];
+  items: MenuItem[];  // <------ Va a cambiar por el modelo
 
 
 
   constructor(private sidenavService: SidenavService) { }
 
   ngOnInit(): void {
+    // Aqui llamaría al servicio para obtener todo el menú (cambiar)
     this.sidenavService.currentDisplay.subscribe(display => this.display = display)
 
     this.items = [

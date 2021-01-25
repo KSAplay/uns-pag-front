@@ -1,30 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Noticia } from '../models/noticia';
-import { Tema } from '../models/tema';
+import { HOST } from 'src/shared/var.constant';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoticiasService {
 
-  prueba: string = "Blanco"; // Rojo, Blanco o Gris
+  url: string = `${HOST}/noticias`; // URL del Servidor
 
   constructor(private http: HttpClient) { }
 
-  /* ----------- OBTENER NOTICIAS ----------- */
+  // ---------------------------------------------------------------------
+  //                      OBTENER NOTICIAS VISIBLES
+  // ---------------------------------------------------------------------
   getNoticias(): Promise<Noticia[]> {
-    return this.http.get<any>('assets/data/noticias.json')
+    return this.http.get<any>(`${this.url}/visibles`)
       .toPromise()
       .then(res => <Noticia[]>res.data)
-      .then(data => { return data; });
-  }
-
-  /* ----------- OBTENER TEMA ----------- */
-  obtenerTema(): Promise<Tema> {
-    return this.http.get<any>('assets/data/tema'+this.prueba+'.json')
-      .toPromise()
-      .then(res => <Tema>res.data)
       .then(data => { return data; });
   }
 }

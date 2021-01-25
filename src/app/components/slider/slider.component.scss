@@ -32,14 +32,21 @@
     height: auto;
   }
 
+// -------------------------------------------------------------------------------------------------------
+//                               PARTE DEBAJO DE LOS BOTONES DE LA GALERÍA
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep ul.p-galleria-indicators.p-reset {
   padding-bottom: 35px;
 }
-
+// -------------------------------------------------------------------------------------------------------
+//                                 CONTENEDOR DE LOS BOTONES DE LA GALERÍA
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep .p-galleria.p-galleria-indicator-onitem .p-galleria-indicators{
     background-color:rgba(0, 0, 0, 0);
 }
-
+// -------------------------------------------------------------------------------------------------------
+//                                     BOTÓNES INACTIVOS DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep .p-galleria.p-galleria-indicator-onitem .p-galleria-indicators .p-galleria-indicator button {
     background-color: transparent;
     border-radius: 10px;
@@ -52,14 +59,17 @@
     margin-right: 3px;
     margin-top: 0;
 }
-
-
+// -------------------------------------------------------------------------------------------------------
+//                                       BOTÓN ACTIVO DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep .p-galleria.p-galleria-indicator-onitem .p-galleria-indicators .p-galleria-indicator.p-highlight button {
     background-color: $rojoPrimario;
     border-color: $rojoPrimario;
 }
 
-
+// -------------------------------------------------------------------------------------------------------
+//                                              RESPONSIVE
+// -------------------------------------------------------------------------------------------------------
 @media only screen and (min-width: 1800px) {
   .titulo-centro{ font-size: 10ch; }
   .subtitulo-centro{ padding-left: 38%; padding-right: 38%; font-size: 4.5ch; }

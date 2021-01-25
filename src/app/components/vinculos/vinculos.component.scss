@@ -1,21 +1,22 @@
 
 @import '../../../shared/colores.scss';
 
+// -------------------------------------------------------------------------------------------------------
+//                                       VARIABLES DINÁMICAS
+// -------------------------------------------------------------------------------------------------------
 $Flechas: var(--vinculos-flechas);
 $BordeActivo: var(--vinculos-btnBordeActivo);
 $RellenoActivo: var(--vinculos-btnRellenoActivo);
 $BordeInactivo: var(--vinculos-btnBordeInactivo);
+// -------------------------------------------------------------------------------------------------------
 
 .vinculos{
-    //background-color: $grisVinculos;
     height: auto;
     font-size: 23px;
     padding: 2.5% 0px 2.5% 6%;
-    //color: $rojoPrimario;
 }
 
 .logos{
-    //background-color: $grisVinculos;
     height: auto;
     padding-right: 38px;
     padding-left: 38px;
@@ -37,7 +38,17 @@ $BordeInactivo: var(--vinculos-btnBordeInactivo);
     height: 110px;
 }
 
-/* BOTÓNES INACTIVOS (los cambios aqui aplican para el Boton Activo)*/
+// -------------------------------------------------------------------------------------------------------
+//                                       BOTÓN ACTIVO DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
+::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator.p-highlight button.p-link {
+    background-color: $RellenoActivo;
+    border-color: $BordeActivo;
+    border-radius: 5px;
+}
+// -------------------------------------------------------------------------------------------------------
+//                                     BOTÓNES INACTIVOS DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator button.p-link {
     margin-top: 15px;
     background-color: transparent;
@@ -48,21 +59,18 @@ $BordeInactivo: var(--vinculos-btnBordeInactivo);
     height: 12px;
     width: 25px;
 }
-
-/* BOTON ACTIVO (Los cambios sobreescriben el de los Inactivos)*/
-::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator.p-highlight button.p-link {
-    background-color: $RellenoActivo;
-    border-color: $BordeActivo;
-    border-radius: 5px;
-}
-
-/* FLECHAS DE LOS COSTADOS */
+// -------------------------------------------------------------------------------------------------------
+//                                          FLECHAS DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep div.logos button.p-link.p-ripple span.p-carousel-prev-icon{
     font-weight: bolder;
     color: $Flechas;
     border-radius: 0px;
 }
 
+// -------------------------------------------------------------------------------------------------------
+//                                               RESPONSIVE
+// -------------------------------------------------------------------------------------------------------
 @media only screen and (min-width: 1800px) {
     ::ng-deep div.logos ul.p-carousel-indicators.p-reset li.p-carousel-indicator button.p-link {
         margin-top: 25px;

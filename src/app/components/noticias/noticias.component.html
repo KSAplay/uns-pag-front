@@ -9,13 +9,12 @@
         [style]="{}">
             <ng-template let-noticia pTemplate="item">
                 <div class="card">
-                    <img class="card-img" src="{{ noticia.srcImage }}" alt="{{ noticia.title }}" /><br />
-
+                    <img class="card-img" [src]="noticia.host_imagen+'/'+noticia.nombre_imagen" [alt]="noticia.nombre_imagen" /><br />
                     <div class="card-text">
-                        {{ noticia.title }}
+                        {{ noticia.titular }}
                     </div>
                     <div class="fecha">
-                        {{ noticia.fecha }}
+                        {{ noticia.fecha_noticia | date: 'dd/MM/yyyy'}}
                     </div>
                 </div>
             </ng-template>

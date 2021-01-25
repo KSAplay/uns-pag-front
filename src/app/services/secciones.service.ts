@@ -8,10 +8,13 @@ import { HOST } from 'src/shared/var.constant';
 })
 export class SeccionesService {
 
-  url: string = `${HOST}/secciones`
+  url: string = `${HOST}/secciones`;  // URL del Servidor
 
   constructor(private http: HttpClient) { }
 
+  // ---------------------------------------------------------------------
+  //                     OBTENER SECCIONES ORDENADAS
+  // ---------------------------------------------------------------------
   getSeccionesOrden(): Promise<Seccion[]> {
     return this.http.get<any>(`${this.url}/orden`)
       .toPromise()

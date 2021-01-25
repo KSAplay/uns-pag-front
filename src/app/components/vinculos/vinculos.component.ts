@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Image } from 'src/app/models/image';
+import { Vinculo } from '../../models/vinculo';
 import { Tema } from 'src/app/models/tema';
 import { TemasService } from 'src/app/services/temas.service';
+import { VinculosService } from '../../services/vinculos.service';
+import { HOST } from '../../../shared/var.constant';
 
 @Component({
   selector: 'app-vinculos',
@@ -10,8 +12,11 @@ import { TemasService } from 'src/app/services/temas.service';
 })
 export class VinculosComponent implements OnInit {
 
+  // Variable del clase/modelo Tema
   tema = new Tema();
-  logos: Image[];
+  // Variable de los Vinculos visibles
+  vinculos: Vinculo[];
+  // Opciones para el Responsive del Carrusel
   responsiveOptions = [
       {
           breakpoint: '2600px',
@@ -45,25 +50,22 @@ export class VinculosComponent implements OnInit {
       }
   ];
 
-  constructor(private temasService: TemasService) {
-    this.logos = [];
+  constructor(private temasService: TemasService, private vinculosService: VinculosService) {
+    this.vinculos = [];
   }
 
   ngOnInit(): void {
-
+    // Llamada a la función "getVinculos()" del servicio "vinculos.service.ts"
+    // y almacenar la data en el array "vinculos[]"
+    this.vinculosService.getVinculos().then(vinculos =>{ 
+      this.vinculos = vinculos;
+    });
+    // Llamada a la función "obtenerTema()" del servicio "temas.service.ts"
+    // y almacenar la data en la variable "tema: Tema()"
     this.temasService.obtenerTema('VinculosComponent').then(theme =>{ 
       this.tema = theme;
     });
-
-    this.logos = [
-      {srcImage : 'assets/images/vinculos/uniBernardo.png', alt : 'Universidad Bernardo OHIGGIN'},
-      {srcImage : "assets/images/vinculos/science-direct.png", alt : 'Science Direct'},
-      {srcImage : "assets/images/vinculos/iop.png", alt : 'IOP Science'},
-      {srcImage : "assets/images/vinculos/sunedu.png", alt : 'SUNEDU'},
-      {srcImage : "assets/images/vinculos/pronabec.png", alt : 'Pronabec'},
-      {srcImage : "assets/images/vinculos/beca-presidente.png", alt : 'Beca Presidente'}
-    ];
-
+    // Espera de 1 segundo para aplicar el tema (debido a la demora que toma en guardar los datos)
     setTimeout(() => {this.aplicarTema(this.tema)}, 1000);
   }
 

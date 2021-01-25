@@ -10,9 +10,12 @@ import { Tema } from 'src/app/models/tema';
   styleUrls: ['./comunicados.component.scss']
 })
 export class ComunicadosComponent implements OnInit {
-  comunicados: Comunicado[];
-  tema = new Tema();
 
+  // Array de los Comunicados visibles
+  comunicados: Comunicado[];
+  // Variable del Tema de Comunicados
+  tema = new Tema();
+  // Opciones para el Responsive del Carrusel
   responsiveOptions: any[] = [
     {
         breakpoint: '2600px',
@@ -41,14 +44,17 @@ export class ComunicadosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // Llamada a la función "getComunicados()" del servicio "comunicados.service.ts"
+    // y almacenar la data en el array "comunicados[]"
     this.comunicadosService.getComunicados().then(comunicados =>{ 
-      this.comunicados = comunicados
+      this.comunicados = comunicados;
     });
-
+    // Llamada a la función "obtenerTema()" del servicio "temas.service.ts"
+    // y almacenar la data en la variable "tema: Tema()"
     this.temasService.obtenerTema('ComunicadosComponent').then(theme =>{ 
       this.tema = theme;
     });
-
+    // Espera de 1 segundo para aplicar el tema (debido a la demora que toma en guardar los datos)
     setTimeout(() => {this.aplicarTema(this.tema)}, 1000);
   }
 
@@ -58,8 +64,7 @@ export class ComunicadosComponent implements OnInit {
     // Carrousel Boton Activo
     document.documentElement.style.setProperty('--comunicados-btnBordeActivo', tema.color_btn_carrousel_borde_activo);
     document.documentElement.style.setProperty('--comunicados-btnRellenoActivo', tema.color_btn_carrousel_relleno_activo);
-    // Carrousel Boton inactivo
+    // Carrousel Boton Inactivo
     document.documentElement.style.setProperty('--comunicados-btnBordeInactivo', tema.color_btn_carrousel_borde_inactivo);
   }
-
 }

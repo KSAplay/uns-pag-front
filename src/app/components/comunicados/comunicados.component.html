@@ -9,9 +9,9 @@
             <ng-template let-comunicado pTemplate="item">
 
                     <div class="card">
-                        <img class="com-img" src="{{comunicado.srcImage}}" alt="Comunicado1">
+                        <img class="com-img" [src]="comunicado.host_imagen+'/'+comunicado.nombre_imagen" [alt]="comunicado.nombre_imagen">
                         <div class="text-block">
-                            <b>{{comunicado.fecha}}</b>
+                            <b>{{comunicado.fecha_comunicado | date: 'dd/MM/yyyy'}}</b>
                         </div>
                     </div>
                     

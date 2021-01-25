@@ -1,6 +1,8 @@
-export interface Comunicado {
-    srcImage : string;
-    alt: string;
-    fecha: string;
+
+export class Comunicado{
+    id_comunicado: number;
+    nombre_imagen: string;
+    host_imagen: string;
+    fecha_comunicado: Date;
     visible: boolean;
 }

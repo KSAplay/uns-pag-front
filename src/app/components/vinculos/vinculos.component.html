@@ -5,11 +5,11 @@
 
 <div [ngStyle]="{'background-color': tema.color_fondo}" class="p-grid logos">
     <div class="p-col-12">
-        <p-carousel [value]="logos" styleClass="carrucel" [numVisible]="5" [numScroll]="5" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
-            <ng-template let-log pTemplate="item">
+        <p-carousel [value]="vinculos" styleClass="carrucel" [numVisible]="5" [numScroll]="5" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+            <ng-template let-vinculo pTemplate="item">
 
                     <div class="card">
-                        <img class="logo-img" [src]="log.srcImage" [alt]="log.alt">
+                        <img class="logo-img" [src]="vinculo.host_imagen+'/'+vinculo.nombre_imagen" [alt]="vinculo.nombre_imagen">
                     </div>
 
             </ng-template>

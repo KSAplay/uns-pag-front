@@ -1,26 +1,26 @@
 
 @import "../../../shared/colores.scss";
 
-// VARIABLES
+// -------------------------------------------------------------------------------------------------------
+//                                          VARIABLES DINÁMICAS
+// -------------------------------------------------------------------------------------------------------
 $Flechas: var(--noticias-flechas);
 $BordeActivo: var(--noticias-btnBordeActivo);
 $RellenoActivo: var(--noticias-btnRellenoActivo);
 $BordeInactivo: var(--noticias-btnBordeInactivo);
+// -------------------------------------------------------------------------------------------------------
 
 ::ng-deep .p-component {
     font-family: 'PT Sans', sans-serif;
 }
 
 .noticias{
-    //background-color: white;
     height: auto;
     font-size: 23px;
     padding: 3% 0% 2% 6%;
-    //color: $rojoPrimario; 
 }
 
 .news{
-    //background-color: white;
     padding-left: 3%;
     padding-right: 3%;
     padding-bottom: 0.5%;
@@ -35,10 +35,6 @@ $BordeInactivo: var(--noticias-btnBordeInactivo);
     width: auto;
     margin: 4%;
     padding: 3%;
-   /* margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 20%;
-    height: 330%;*/
     -webkit-filter: drop-shadow(3px 3px 5px #0000003a);
     filter: drop-shadow(3px 3px 5px #0000003a);
 }
@@ -52,18 +48,15 @@ $BordeInactivo: var(--noticias-btnBordeInactivo);
     padding-right: 20px;
     height: 100px;
     overflow: hidden;
-    //height: 65px;
 }
 
 
 .fecha{
-    //margin-top: 10px;
     color: $rojoPrimario;
     font-size: 15px;
     font-weight: bold;
     padding-top: 2px;
     bottom: 3%;
-    //float: bottom;
     width: auto;
     white-space: nowrap;
 }
@@ -76,10 +69,11 @@ $BordeInactivo: var(--noticias-btnBordeInactivo);
     height: 180px;
     margin-top: 2%;
     object-fit: cover;
-    //height: 190px;
-    //margin-bottom: 8%;
 }
 
+// -------------------------------------------------------------------------------------------------------
+//                                     BOTONES INACTIVOS DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep .news .p-carousel .p-carousel-indicators button {
     padding-top: 0;
     margin-top: 5px;
@@ -92,7 +86,9 @@ $BordeInactivo: var(--noticias-btnBordeInactivo);
     width: 25px;
 
 }
-
+// -------------------------------------------------------------------------------------------------------
+//                                       BOTÓN ACTIVO DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
 .news{
     ::ng-deep{
         .p-carousel .p-carousel-indicators .p-highlight button {
@@ -102,15 +98,18 @@ $BordeInactivo: var(--noticias-btnBordeInactivo);
         }
     } 
 }
-
-
+// -------------------------------------------------------------------------------------------------------
+//                                          FLECHAS DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep .news button.p-link.p-ripple span.p-carousel-prev-icon{
     font-weight: bolder;
     color: $Flechas;
     border-radius: 0px;
 }
 
-
+// -------------------------------------------------------------------------------------------------------
+//                                               RESPONSIVE
+// -------------------------------------------------------------------------------------------------------
 @media only screen and (min-width: 1800px) {
     ::ng-deep .news .p-carousel .p-carousel-indicators .p-carousel-indicator button {
         margin-top: 25px;

@@ -8,12 +8,12 @@ import { HOST } from '../../shared/var.constant';
 })
 export class TemasService {
 
-  url: string = `${HOST}/temas`
+  url: string = `${HOST}/temas`;  // URL del Servidor
 
   constructor(private http: HttpClient) { }
 
   // ---------------------------------------------------------------------
-  //                    OBTENER TEMA SEGUN COMPONENTE
+  //                   OBTENER TEMA SEGUN EL COMPONENTE
   // ---------------------------------------------------------------------
   obtenerTema(frontendid: string): Promise<Tema>{
     return this.http.get<any>(`${this.url}/seccion/frontendid/${frontendid}`)

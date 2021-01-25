@@ -1,10 +1,14 @@
 
 @import '../../../shared/colores.scss';
 
+// -------------------------------------------------------------------------------------------------------
+//                                          VARIABLES DINÁMICAS
+// -------------------------------------------------------------------------------------------------------
 $Flechas: var(--comunicados-flechas);
 $BordeActivo: var(--comunicados-btnBordeActivo);
 $RellenoActivo: var(--comunicados-btnRellenoActivo);
 $BordeInactivo: var(--comunicados-btnBordeInactivo);
+// -------------------------------------------------------------------------------------------------------
 
 .text-block{
     position: absolute;
@@ -17,7 +21,6 @@ $BordeInactivo: var(--comunicados-btnBordeInactivo);
 }
 
 .comunicados{
-    //background-color: $rojoPrimario;
     height: auto;
     font-size: 23px;
     padding: 2.5% 0px 2.5% 6%;
@@ -25,7 +28,6 @@ $BordeInactivo: var(--comunicados-btnBordeInactivo);
 }
 
 .events{
-    //background-color:$rojoPrimario;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -51,7 +53,9 @@ $BordeInactivo: var(--comunicados-btnBordeInactivo);
     height: 400px;
 }
 
-/* BOTONES INACTIVOS */
+// -------------------------------------------------------------------------------------------------------
+//                                     BOTONES INACTIVOS DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep .events .p-carousel .p-carousel-indicators .p-carousel-indicator button {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -63,22 +67,26 @@ $BordeInactivo: var(--comunicados-btnBordeInactivo);
     height: 12px;
     width: 25px;
 }
-
-/* BOTONES ACTIVOS */
+// -------------------------------------------------------------------------------------------------------
+//                                       BOTÓN ACTIVO DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep .events .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
     background-color: $RellenoActivo;
     border-color: $BordeActivo;
     border-radius: 5px;
 }
-
-/* FLECHAS DE LOS COSTADOS */
+// -------------------------------------------------------------------------------------------------------
+//                                          FLECHAS DEL CARRUSEL
+// -------------------------------------------------------------------------------------------------------
 ::ng-deep .events button.p-link.p-ripple span.p-carousel-prev-icon{
     font-weight: bolder;
     color: $Flechas;
     border-radius: 0px;
 }
 
-
+// -------------------------------------------------------------------------------------------------------
+//                                               RESPONSIVE
+// -------------------------------------------------------------------------------------------------------
 @media only screen and (min-width: 1800px) {
     ::ng-deep .events .p-carousel .p-carousel-indicators .p-carousel-indicator button {
         margin-top: 25px;
