@@ -37,10 +37,10 @@ export class MenuBarComponent implements OnInit {
         label: item.nombre,
         items: item.children.map(ite =>[{
           label: ite.nombre,
-          route: ite.ruta,
+          url: ite.ruta,
           items: ite.children.map(it =>({
             label: it.nombre,
-            route: it.ruta
+            url: it.ruta
           }))
         }])
       }));
