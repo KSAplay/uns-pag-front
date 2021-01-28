@@ -10,7 +10,7 @@ import { SliderService } from 'src/app/services/slider.service';
 export class SliderComponent implements OnInit {
 
   // Variable para las Imágenes del Slider
-  images: Slider[];
+  sliders: Slider[];
   // Opciones para el Responsive del Carrusel
   responsiveOptions: any[] = [
     {
@@ -28,14 +28,14 @@ export class SliderComponent implements OnInit {
   ];
 
   constructor(private sliderService: SliderService) {
-    this.images = [];
+    this.sliders = [];
   }
 
   ngOnInit(): void {
     // Llamada a la función "getImages()" del servicio "slider.service.ts"
     // y almacenar la data en el array "images[]"
-    this.sliderService.getImages().then(images =>{ 
-      this.images = images
+    this.sliderService.getSliders().then(sliders =>{ 
+      this.sliders = sliders
     });
   }
 

@@ -1,11 +1,11 @@
 
 <div class="p-grid container"  style="margin-top: -50px;">
-    <p-galleria  style="width: 100%;" [value]="images" [responsiveOptions]="responsiveOptions" [numVisible]="5" [showThumbnails]="false"
+    <p-galleria  style="width: 100%;" [value]="sliders" [responsiveOptions]="responsiveOptions" [numVisible]="5" [showThumbnails]="false"
         [showIndicators]="true" [showIndicatorsOnItem]="true" [circular]="true" [autoPlay]="3000">
     
-        <ng-template pTemplate="item" let-item>
+        <ng-template pTemplate="item" let-slider>
             
-            <img [src]="item.srcImage" style="width: 100%; filter: brightness(70%); " >
+            <img clas="Slider-img" [src]="slider.host_imagen+'/'+slider.nombre_imagen" style="width: 100%; height: 101vh; filter: brightness(70%);">
     
             <div class="centered">
                 <h1 class="titulo-centro">Universidad Nacional del Santa</h1>

@@ -8,17 +8,17 @@ import { HOST } from 'src/shared/var.constant';
 })
 export class SliderService {
 
-  url: string = `${HOST}/sliders`;  // URL del Servidor
+  url: string = `${HOST}/sliders`; // URL del Servidor
 
   constructor(private http: HttpClient) { }
 
   // ---------------------------------------------------------------------
-  //                OBTENER IMAGENES DEL SLIDER VISIBLES
+  //                      OBTENER VÍNCULOS VISIBLES
   // ---------------------------------------------------------------------
-  getImages(): Promise<Slider[]> {
-    return this.http.get<any>('assets/data/fotos.json')
+  getSliders(): Promise<Slider[]> {
+    return this.http.get<any>(`${this.url}/visibles`)
       .toPromise()
       .then(res => <Slider[]>res.data)
       .then(data => { return data; });
-    }
+  }
 }
