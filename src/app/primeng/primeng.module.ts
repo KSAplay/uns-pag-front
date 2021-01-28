@@ -9,6 +9,9 @@ import {SidebarModule} from 'primeng/sidebar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MenuModule} from 'primeng/menu';
 import {PanelMenuModule} from 'primeng/panelmenu';
+import {MegaMenuModule} from 'primeng/megamenu';
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     SidebarModule,
     BrowserAnimationsModule,
     MenuModule,
-    PanelMenuModule
+    PanelMenuModule,
+    MegaMenuModule,
+    ButtonModule,
+    InputTextModule
     
   ],
   exports: [
@@ -31,7 +37,10 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     SidebarModule,
     BrowserAnimationsModule,
     MenuModule,
-    PanelMenuModule
+    PanelMenuModule,
+    MegaMenuModule,
+    ButtonModule,
+    InputTextModule
   ]
 })
 export class PrimengModule { }
