@@ -11,7 +11,7 @@ import { SidenavService } from 'src/app/services/sidenav.service';
 export class MenuBarComponent implements OnInit {
 
   display: boolean;
-
+  visibleSidebar1;
   items: MegaMenuItem[];
 
 

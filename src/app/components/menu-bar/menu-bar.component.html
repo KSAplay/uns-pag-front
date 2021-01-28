@@ -1,11 +1,25 @@
-
 <div class="text-block">
+
   <div class="menu-logo" style="float: left">
-    <img class="logo-uns" src="assets/images/menu/logo-blanco-uns.png" alt="Logo UNS"/>
+    <img
+      class="logo-uns"
+      src="assets/images/menu/logo-blanco-uns.png"
+      alt="Logo UNS"
+    />
   </div>
 
-  <p-megaMenu [model]="items">
-    <input type="text" pInputText placeholder="Buscar">
+  <p-megaMenu orientation="horizontal" [model]="items" class="HorizontalMenu">
+    <input type="text" pInputText placeholder="Buscar" />
   </p-megaMenu>
 
+  <p-button
+    type="button"
+    (click)="visibleSidebar1 = true"
+    icon="pi pi-bars" class="MenuBtn"></p-button>
 </div>
+
+<p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
+  <p-megaMenu orientation="vertical" [model]="items" Class="VerticalMenu">
+    <input type="text" pInputText placeholder="Buscar" />
+  </p-megaMenu>
+</p-sidebar>

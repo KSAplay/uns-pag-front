@@ -17,10 +17,49 @@
   border: 0px;
   padding-right: 0px;
 }
+
+// -------------------------------------------------------------------------------------------------------
+//                                      SIDEBAR
+// -------------------------------------------------------------------------------------------------------
+::ng-deep{
+  .p-sidebar{
+    background: $rojoPrimario;
+  }
+
+  .p-sidebar-left{
+    width: auto !important;
+  }
+
+  .p-sidebar .p-sidebar-close {
+    display: none;
+  }
+
+  .p-button{
+    background: none;
+    border: 0px;
+    float: right;
+  }
+
+     
+  .MenuBtn {
+    display: none;
+  }
+
+  .p-button:enabled:hover, .p-button:enabled:focus{
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+}
+
 // -------------------------------------------------------------------------------------------------------
 //                                       MEGA MENU y TEXT-BLOCK
 // -------------------------------------------------------------------------------------------------------
 ::ng-deep{
+  .VerticalMenuBox {
+    visibility: hidden;
+  }
+
   .p-megamenu{
     float: right;
     background: none;
@@ -44,6 +83,10 @@
     padding-left: 20px;
     border: 0px;
     border-radius: 50px;
+  }
+
+  .VerticalMenu .p-inputtext{
+    margin-left: 0;
   }
   .p-megamenu .p-megamenu-panel{
     background-color: $rojoPrimario;
@@ -71,12 +114,35 @@
   .logo-uns { height: 50px; margin-top: 5px; margin-left: 10px;}
 }
 
+@media only screen and (max-width: 1250px) {
+  ::ng-deep{
+    .MenuBtn {
+      display: block;
+    }
+
+    .HorizontalMenu .p-megamenu {
+      display: none;
+    }
+  }
+}
+
+
+
 @media only screen and (max-width: 1000px) {
 
 }
 
 @media only screen and (max-width: 560px) {
   .logo-uns { height: 40px; margin-top: 3px; margin-left: 8px;}
+  ::ng-deep{
+    .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text, .p-inputtext{
+      font-size: 12px;
+    }
+
+    .p-sidebar-left{
+      width: 220px !important;
+    }
+  }
 }
 
 @media only screen and (max-width: 376px) {
